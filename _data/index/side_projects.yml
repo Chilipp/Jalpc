@@ -1,0 +1,73 @@
+# projects section data
+# If you don't have language feature(language.yml is empty), ignore "i18n" items
+# Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
+- name: GWGEN
+  i18n: gwgen
+  gh_user: ARVE-Research
+  repo: gwgen
+  icon: fa-cloud-sun-rain
+  desc: A global weather generator for daily data
+  long_desc: |
+    This synthesis of FORTRAN and Python is a globally applicable weather
+    generator parameterized through a global dataset of weather station data with
+    more than 50 million individual daily records. It downscales wind speed,
+    precipitation, temperature, and cloud cover from monthly to daily resolution.
+    <br>
+    More at <a href="https://arve-research.github.io/gwgen/">arve-research.gihub.io/gwgen</a>
+
+- name: IUCm
+  i18n: iucm
+  gh_user: Chilipp
+  repo: iucm
+  icon: fa-city
+  desc: A model to simulate urban growth and transformation with the objective of minimising the energy required for transportation.
+  long_desc: |
+    The Integrated Urban Complexity model (IUCm) is a relatively simple
+    probablistic computational model to compute “climate-smart urban forms”,
+    that cut down emissions related to energy consumption from urban mobility.
+    <br>
+    More at <a href="https://iucm.readthedocs.io">iucm.readthedocs.io</a>
+
+- name: docrep
+  i18n: docrep
+  gh_user: Chilipp
+  repo: docrep
+  icon_style: fab
+  icon: fa-python
+  desc: Python package for docstring repetition
+  long_desc: |
+    The documentation repetition module (docrep) targets developpers that
+    develop complex and nested Python APIs and helps them to create a
+    well-documented software.
+    <br>
+    More at <a href="https://docrep.readthedocs.io">docrep.readthedocs.io</a>
+
+- name: sphinx-nbexamples
+  i18n: iucm
+  gh_user: Chilipp
+  repo: iucm
+  img: https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg
+  img_title: Cameron Oelsen [BSD (http://opensource.org/licenses/bsd-license.php)], via Wikimedia Commons
+  img_link: https://commons.wikimedia.org/wiki/File:Jupyter_logo.svg
+  desc: Include Jupyter notebooks in a sphinx documentation
+  long_desc: |
+    This python package creates an example gallery for documentations generated
+    by pythons sphinx package out of a bunch of jupyter notebooks.
+    <br>
+    More examples at <a href="https://sphinx-nbexamples.readthedocs.io">sphinx-nbexamples.readthedocs.io</a>
+
+- name: model-organization
+  i18n: model-organization
+  gh_user: Chilipp
+  repo: model-organization
+  icon_style: fab
+  icon: fa-python
+  desc: Python package for a transparent organization of computational models
+
+- name: funcargparse
+  i18n: funcargparse
+  gh_user: Chilipp
+  repo: funcargparse
+  icon_style: fab
+  icon: fa-python
+  desc: Python package to create command line parsers from docstrings
