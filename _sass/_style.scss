@@ -2814,3 +2814,19 @@ body {
     }
   }
 }
+
+details summary#side_projects_summary:after {
+  content: "⊕";
+  font-size: 3em;
+}
+details[open] summary#side_projects_summary:after {
+  content: "⊖";
+}
+
+details.project_summary summary:after {
+  content: "⊕";
+  font-size: 1.5em;
+}
+details.project_summary[open] summary:after {
+  content: "⊖";
+}
