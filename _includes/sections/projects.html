@@ -18,7 +18,15 @@
             <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
             {% endif %}
               <div class="team-member">
-                  <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
+                  {% if project.img %}
+                  {% if project.img_link %}
+                  <a title="{{ project.img_title }}" href="{{ project.img_link }}">
+                  {% endif %}
+                      <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
+                  {% if project.img_link %}</a> {% endif %}
+                  {% elsif project.icon %}
+                  <i class="{% if project.icon_style %} {{ project.icon_style }} {% else %} fas {% endif %} {{ project.icon | prepend: site.baseurl }} fa-5x"></i>
+                  {% endif %}
                   <h4>
                   {% if project.url %}
                   <a href="{{ project.url }}" target="_blank"><span class="navy">{{ project.name }}</span></a>
