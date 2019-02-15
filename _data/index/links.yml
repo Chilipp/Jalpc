@@ -1,18 +1,22 @@
 # links section data
-- last_name: Name 1
+- last_name: Davis
+  first_name: Basil A. S.
+  desc: Supervisor
+  website: https://wp.unil.ch/davisgroup/basil-davis/
+  email: basil.davis@unil.ch
+
+- last_name: Chevalier
+  first_name: Manuel
+  desc: Team member
+  website: https://chevaliermanuel.wixsite.com/webpage
+  email: manuel.chevalier@unil.ch
+
+- last_name: Davis Group
   first_name:
-  desc: CEO
-  website: https://www.google.com
-  email: ceo@google.com
+  desc: Laboratory
+  website: https://wp.unil.ch/davisgroup/
 
-- last_name: Donate
-  first_name: Jalpc
-  desc: Support Jalpc
-  website: http://www.jarrekk.com/donate/
-  email: me@jarrekk.com
-
-- last_name: LN
-  first_name: FN
-  desc: COO
-  website: https://github.com
-  email: coo@google.com
+- last_name: IDYST
+  first_name:
+  desc: Institute of Earth Surface Dynamics
+  website: https://www.unil.ch/idyst/home.html
