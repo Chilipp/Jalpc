@@ -1,0 +1,6 @@
+# skills section data
+
+label: Coding skills
+id : cs
+aspects: Python, R, MATLAB, FORTRAN, Bash, C/C++, Postgres, Javascript
+percentage: 100, 50, 40, 70, 90, 30, 60, 30
