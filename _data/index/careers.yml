@@ -1,29 +1,57 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name:
-    detail: Company A
-    i18n: company_a
+    detail: Université de Lausanne
+    i18n: PhD
   desc:
-    detail: I worked at Company A ...
-    i18n: company_a_desc
+    detail: Institute of Earth Surface Dynamics (IDYST)
+    i18n: PhD_desc
   date:
-    detail: Apr. 2016
-    i18n: company_a_date
+    detail: Dec. 2015
+    i18n: PhD_date
   job:
-    detail: CTO
-    i18n: company_a_job
-  icon: fa-plus-square
+    detail: PhD student
+    i18n: v_job
+  icon: fa-database
 
 - name:
-    detail: Company B
-    i18n: company_b
+    detail: Max-Planck-Institute for Meteorology/University of Hamburg
+    i18n: MSc
   desc:
-    detail: I worked at Company B ...
-    i18n: company_b_desc
+    detail: Master of Integrated Climate System Sciences
+    i18n: MSc_desc
   date:
-    detail: Jun. 2015
-    i18n: company_b_date
+    detail: Sep. 2013
+    i18n: MSc_date
   job:
-    detail: Full Stack Developer
-    i18n: company_b_job
-  icon: fa-plus-square
+    detail: Master student
+    i18n: MSc_job
+  icon: fa-cloud-sun-rain
+
+- name:
+    detail: Greenpeace Germany e.V.
+    i18n: GP
+  desc:
+    detail: Biodiversity and Climate team
+    i18n: GP_desc
+  date:
+    detail: Sep. 2012
+    i18n: GP_date
+  job:
+    detail: Intern
+    i18n: GP_job
+  icon: fa-peace
+
+- name:
+    detail: University of Heidelberg
+    i18n: BSc
+  desc:
+      detail: Bachelor of Physics
+      i18n: BSc_desc
+  date:
+      detail: Sep. 2009
+      i18n: BSc_date
+  job:
+      detail: Bachelor student
+      i18n: BSc_job
+  icon: fa-infinity
