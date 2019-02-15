@@ -1,0 +1,78 @@
+% Encoding: UTF-8
+
+@InProceedings{SommerKaplan2016,
+  author    = {{Sommer}, P. and {Kaplan}, J.},
+  title     = {{Fundamental statistical relationships between monthly and daily meteorological variables: Temporal downscaling of weather based on a global observational dataset}},
+  booktitle = {EGU General Assembly Conference Abstracts},
+  year      = {2016},
+  volume    = {18},
+  series    = {EGU General Assembly Conference Abstracts},
+  pages     = {EPSC2016-18183},
+  month     = apr,
+  adsnote   = {Provided by the SAO/NASA Astrophysics Data System},
+  adsurl    = {http://adsabs.harvard.edu/abs/2016EGUGA..1818183S},
+  eid       = {EPSC2016-18183},
+}
+
+@InProceedings{Sommer2016,
+  author    = {{Sommer}, P.},
+  title     = {{Psyplot: Visualizing rectangular and triangular Climate Model Data with Python}},
+  booktitle = {EGU General Assembly Conference Abstracts},
+  year      = {2016},
+  volume    = {18},
+  series    = {EGU General Assembly Conference Abstracts},
+  pages     = {18185},
+  month     = apr,
+  adsnote   = {Provided by the SAO/NASA Astrophysics Data System},
+  adsurl    = {http://adsabs.harvard.edu/abs/2016EGUGA..1818185S},
+}
+
+@InProceedings{SommerKaplan2016a,
+  author    = {{Sommer}, P. and {Kaplan}, J.},
+  title     = {{Fundamental statistical relationships between monthly and daily meteorological variables: Temporal downscaling of weather based on a global observational dataset}},
+  booktitle = {Workshop on Stochastic Weather Generators},
+  year      = {2016},
+  address   = {Vannes (France)},
+  month     = {may},
+  publisher = {University of Bretagne Sud},
+  url       = {https://www.lebesgue.fr/content/sem2016-climate-program},
+}
+
+@InProceedings{SommerKaplan2017c,
+  author    = {{Sommer}, P. and {Kaplan}, J.},
+  title     = {{Quantitative Modeling of Human-Environment Interactions in Preindustrial Time}},
+  booktitle = {PAGES OSM 2017, Abstract Book},
+  year      = {2017},
+  pages     = {129-129},
+  month     = apr,
+  adsurl    = {http://pastglobalchanges.org/osm2017/downloads/osm-abstract-book-zaragoza-2017.pdf},
+  eid       = {02126, 23},
+}
+
+@InProceedings{Sommer2018g,
+  author    = {{Sommer}, P.~S.},
+  title     = {{Psyplot: Interactive data analysis and visualization with Python}},
+  booktitle = {EGU General Assembly Conference Abstracts},
+  year      = {2018},
+  volume    = {20},
+  series    = {EGU General Assembly Conference Abstracts},
+  pages     = {4701},
+  month     = apr,
+  adsnote   = {Provided by the SAO/NASA Astrophysics Data System},
+  adsurl    = {http://adsabs.harvard.edu/abs/2018EGUGA..20.4701S},
+}
+
+@InProceedings{SommerDavisChevalier2018,
+  author    = {{Sommer}, P.~S. and {Davis}, B.~A.~S. and {Chevalier}, M.},
+  title     = {{STRADITIZE: An open-source program for digitizing pollen diagrams and other types of stratigraphic data}},
+  booktitle = {EGU General Assembly Conference Abstracts},
+  year      = {2018},
+  volume    = {20},
+  series    = {EGU General Assembly Conference Abstracts},
+  pages     = {4433},
+  month     = apr,
+  adsnote   = {Provided by the SAO/NASA Astrophysics Data System},
+  adsurl    = {http://adsabs.harvard.edu/abs/2018EGUGA..20.4433S},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

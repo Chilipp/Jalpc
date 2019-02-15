@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center" id="i18_bib">
+            <div class="navy-line"></div>
+            <h1><span data-i18n="bib.my_bib">Publications</span></h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 " id="i18_papers">
+            <div class="navy-line"></div>
+            <h2><span data-i18n="bib.my_papers">Peer-reviewed</span></h2>
+
+            {% bibliography --file papers %}
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12 " id="i18_conferences">
+            <div class="navy-line"></div>
+            <h2><span data-i18n="bib.my_conferences">Conference contributions</span></h2>
+
+            {% bibliography --file conferences %}
+
+        </div>
+    </div>
+</div>
