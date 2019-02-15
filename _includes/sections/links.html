@@ -23,8 +23,10 @@
             <ul class="list-inline social-icon">
                 <li><a href="{{ link.website }}" target="blank"><i class="fas fa-link"></i></a>
                 </li>
-                <li><a href="mailto:{{ link.email }}"><i class="fas fa-envelope"></i></a>
+                {% if link.email %}
+                <li><a href="mailto:{{ link.email | encode_email }}"><i class="fas fa-envelope"></i></a>
                 </li>
+                {% endif %}
             </ul>
         </div>
         </div>
