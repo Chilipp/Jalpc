@@ -43,9 +43,9 @@
     More at <a href="https://docrep.readthedocs.io">docrep.readthedocs.io</a>
 
 - name: sphinx-nbexamples
-  i18n: iucm
+  i18n: sphinx-nbexamples
   gh_user: Chilipp
-  repo: iucm
+  repo: sphinx-nbexamples
   img: https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg
   img_title: Cameron Oelsen [BSD (http://opensource.org/licenses/bsd-license.php)], via Wikimedia Commons
   img_link: https://commons.wikimedia.org/wiki/File:Jupyter_logo.svg
