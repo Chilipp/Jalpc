@@ -24,11 +24,11 @@
   tpl: projects.html
   css: project
 
-- id: publications
-  i18n: nav.publications
+- id: bibliography
+  i18n: nav.bibliography
   name: Publications
   tpl: bibliography.html
-  css: 
+  css: bibliography
 
 - id: links
   i18n: nav.link

@@ -38,7 +38,7 @@
                   </h4>
                   <p><span data-i18n="projects.{{ project.i18n }}">{{ project.desc }}</span></p>
                   {% if project.long_desc %}
-                  <details class="project_summary"><summary></summary><div style="text-align: justify;">{{ project.long_desc }}</div></details>
+                  <details class="project_summary"><summary></summary><div style="text-align: justify;"><span data-i18n="[html]projects.{{ project.i18n }}_desc">{{ project.long_desc }}</span></div></details>
                   {% endif %}
                   {% if project.repo %}
                   <div user="{{ project.gh_user }}" repo="{{ project.repo }}" class="ghbtn">
@@ -57,7 +57,7 @@
         <div class="col-lg-12 text-center">
             <div class="navy-line"></div>
 
-            <button class="accordion"><h2>Side Projects</h2></button>
+            <button class="accordion"><h2><span data-i18n="projects.my_side_projects">Side Projects</span></h2></button>
             <div class="panel">
             <div class="row">
             {% for project in site.data.index.side_projects %}
@@ -92,7 +92,7 @@
                       </h4>
                       <p><span data-i18n="projects.{{ project.i18n }}">{{ project.desc }}</span></p>
                       {% if project.long_desc %}
-                      <details class="project_summary"><summary></summary><div style="text-align: justify;">{{ project.long_desc }}</div></details>
+                      <details class="project_summary"><summary></summary><div style="text-align: justify;"><span data-i18n="[html]projects.{{ project.i18n }}_desc">{{ project.long_desc }}</span></div></details>
                       {% endif %}
                       {% if project.repo %}
                       <div user="{{ project.gh_user }}" repo="{{ project.repo }}" class="ghbtn">

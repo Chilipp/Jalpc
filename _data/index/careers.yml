@@ -11,7 +11,7 @@
     i18n: PhD_date
   job:
     detail: PhD student
-    i18n: v_job
+    i18n: PhD_job
   icon: fa-database
 
 - name:

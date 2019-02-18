@@ -1,0 +1,86 @@
+{
+  "website":{
+    "title": "Philipp S. Sommer"
+  },
+  "nav":{
+    "home": "Home",
+    "about_me": "Über mich",
+    "skills": "Kenntnisse",
+    "projects": "Projekte",
+    "career": "Karriere",
+    "blog": "Blog",
+    "link": "Links",
+    "bibliography": "Publikationen"
+  },
+  "about_me":{
+    "about_me": "Über mich",
+    "des": "Research Software Engineer für Klimawissenschaften"
+  },
+  "skills":{
+    "my_skills": "Meine Kenntnisse"
+  },
+  "projects":{
+    "my_projects": "Meine Projekte",
+
+    "hornet": "Klimarekonstruktionen der Nördlichen Hemisphäre während des Holozäns",
+    "hornet_desc": "Eine zentrale Frage dieses vom Schweizer Nationalfond (SNF) finanzierten Projektes ist der Beitrag von Winter und Sommer zur interglazialen Warmperiode auf der nördlichen Hemisphäre. Ein besonderer Fokus liegt dabei auf der Rolle der orbital-bedingten gestiegenen Sonneneinstrahlung und auf dem Atmosphärendynamik-bedingten Anstieg des polwärts gewandten Wärmeflusses im Winter. Wir untersuchen die Rolle der atmosphärischen Dynamik indem wir sie mit vergleichbaren Mustern regionaler Klimaanomalien vergleichen. Dabei erstellen wir qualitativ hochwertige gerasterte saisonale Rekonstruktionen des Klimawandels auf der Nördlichen Hemisphäre während des Holozäns. Diese Daten können zur Evaluation von Klimamodellen herangezogen werden, insbesondere im Hinblick auf deren Fähigkeit regionalen Klimawandel zu generieren. Letzteres ist bis heute eine der zentralen Ungewissheiten im Bezug auf den zukünftigen Klimawandel.",
+
+    "psyplot": "Python software zur interaktiven Datenvisualisierung",
+    "psyplot_desc": "psyplot ist ein plattformübergreifendes Open Source Python Projekt das hauptsächlich die Visualisierungsfunktionen von matplotlib mit den Datenmanagementfunktionen des xarray Pakets vereint. Die entstehende Software kann dabei sowohl von der Kommandozeile, als auch durch eine Graphische Benutzeroberfläche bedient werden. <br> Der Hauptzweck dieses Projektes ist es, eine Umgebung zu schaffen, die eine schnelle, attraktive, flexible, einfach anzuwendende, einfach zu reproduzierende und ganz besonders eine interaktive Visualisierung und Analyse von Klimamodelldaten ermöglicht. <br> Durch verschiedene Zusatzprogramme visualisiert psyplot georeferenzierte Klimamodelldaten auf rechteckförmigen und unstrukturierten Gittern. Außerdem können Regressionskurven, sowie stratigraphische Diagramme erstellt werden, und mehr. <br> Anwendungsbeispiele gibt es auf <a href=https://psyplot.readthedocs.io/en/latest/#examples>psyplot.readthedocs.io</a>.",
+
+    "straditize": "Software für die semi-automatische Digitalisierung von Pollendiagrammen und anderen stratigrafischen Diagrammen das per Kommandozeile oder per graphischer Benutzeroberfläche bedient werden kann",
+    "straditize_desc": "STRADITIZE (Stratigraphic Diagram Digitizer) ist ein Open Source Programm mit dem stratigraphische Diagramme in einem einzigen semi-automatischen Vorgang digitalisiert werden können. Es ist darauf ausgerichted, mehrere Teildiagramme zu entdecken welche die selbe vertikale Axis teilen. <br> Mehr Informtation gibt es auf <a href=https://straditize.readthedocs.io>straditize.readthedocs.io</a>.",
+
+    "empd": "Die 'Eurasian Modern Pollen Database'",
+
+    "my_side_projects": "Nebenprojekte",
+
+    "gwgen": "Ein globaler Wettergenerator für tägliche Wetterdaten",
+    "gwgen_desc": "Diese Synthese aus FORTRAN und Python ist ein global anwendbarer Wettergenerator der anhand eines globalen Datensatzes täglicher Wetterstationsdaten mit über 50 Millionen individueller Aufzeichnungen parameterisiert wurde. Er skaliert Windgeschwindigkeit, Niederschlag, Temperatur und Bewölkung von monatlicher auf tägliche Auflösung. <br> Mehr informationen gibt es auf <a href='https://arve-research.github.io/gwgen/'>arve-research.gihub.io/gwgen</a>",
+
+    "iucm": "Ein Model zur Simulation urbaner Wachstums- und Transformationsprozesse bei gleichzeitiger Minimierung von benötigter Transport-Energie",
+    "iucm_desc": "Das 'Integrated Urban Complexity model (IUCm)' is ein relativ einfaches probabilistisches Computermodell um sogennante 'climate-smart urban forms' zu berechnen. Diese verringern transport-bedingte Emissionen durch den Energieverbrauch von urbaner Mobilität. <br> Mehr Informtation gibt es auf <a href='https://iucm.readthedocs.io'>iucm.readthedocs.io</a>",
+
+    "docrep": "Python Programm für die Wiederverwertung von Dokumentationen",
+    "docrep_desc": "Das 'documentation repetition module (docrep)' ist ein Python Programm für die Entwickler komplexer und vernetzter Python Programme. Es hilft ihnen gut dokumentierte Software zu erstellen durch die Wiederverwertung von bisher bestehender Dokumentation. <br> Mehr Information gibt es auf <a href='https://docrep.readthedocs.io'>docrep.readthedocs.io</a>",
+
+    "sphinx-nbexamples": "Python Software zur Einbindung von 'Jupyter notebooks' in einer Sphinx-generierten Dokumentation",
+    "sphinx-nbexamples_desc": "Dieses Python Paket erstelle eine Gallierie aus 'Jupyter Notebooks' für Dokumentation, die durch Pythons Sphinx Paket erstellt wurden. <br> Beispiele gibt es auf <a href='https://sphinx-nbexamples.readthedocs.io'>sphinx-nbexamples.readthedocs.io</a>",
+
+    "model-organization": "Python Programm für die transparente Organisation von Computer-basierten Modellen",
+
+    "funcargparse": "Python Programm um einen Kommandozeilen-Parser anhand von Dokumentationen zu generieren"
+  },
+  "career":{
+    "description": "Während meines Bachelorstudiums entschied ich, meine Forschung mehr auf die Entwicklung unseres Planeten zu fokusieren. Trotz meiner Leidenschaft für die Mathematik in der physikalischen Grundlagenforschung. Wegen meiner theoretischen Neigungen fing ich an zu programmieren und beschäftigte mich mit der Entwicklung von Klimamodellen. Besonders interessiert mich dabei die Analyse großer Datenmengen und deren Visualisierung. Ich finde es immer wieder erstaunlich wie viel neues Wissen wir durch visuelle und statistische Auswertungen generieren können. Deshalb freue ich mich immer, neue Methoden zu erlernen, zu entwickeln und sie mit anderen zu teilen.",
+    "my_career": "Meine Karriere",
+    "PhD": "Promotion",
+    "PhD_desc": "Institute für Erdoberflächen-Dynamik (IDYST)",
+    "PhD_date": "Dez. 2015",
+    "PhD_job": "Doktorant",
+    "MSc": "Max-Planck-Institut für Meteorology/Universität Hamburg",
+    "MSc_desc": "Master für ganzheitliche Klimawissenschaften",
+    "MSc_date": "Sep. 2013",
+    "MSc_job": "Master Student",
+    "GP": "Greenpeace Germany e.V.",
+    "GP_desc": "Biodiversitäts- und Klimateam",
+    "GP_date": "Sep. 2012",
+    "GP_job": "Praktikant",
+    "BSc": "Universität Heidelberg",
+    "BSc_desc": "Bachelor in Physik",
+    "BSc_date": "Sep. 2009",
+    "BSc_job": "Bachelor Student"
+  },
+  "bibliography":{
+    "my_bib": "Publikationen",
+    "my_papers": "Peer-reviewed",
+    "my_conferences": "Konferenzbeiträge"
+  },
+  "blog":{
+    "my_blog": "Mein Blog"
+  },
+  "link":{
+    "link": "Link",
+    "view": "views"
+  }
+}
