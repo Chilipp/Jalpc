@@ -1,6 +1,5 @@
 language: ruby
 script: bundle exec jekyll build
-before_deploy: cp CNAME _site/
 deploy:
   provider: pages
   skip-cleanup: true
