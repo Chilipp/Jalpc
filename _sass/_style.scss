@@ -2906,3 +2906,19 @@ details.bib_abstract {
  color: white;
  margin-bottom: 15px;
 }
+
+.row#legal_footer {
+
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+
+}
+
+.align-items-end {
+    -ms-flex-align: end   !important;
+    align-items: flex-end !important;
+}

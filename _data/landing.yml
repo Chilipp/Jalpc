@@ -35,3 +35,9 @@
   name: Links
   tpl: links.html
   css: contact
+
+- id: legal
+  i18n: nav.legal
+  name: Legal Notice
+  tpl: legal.html
+  css: 

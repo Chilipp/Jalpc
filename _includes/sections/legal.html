@@ -1,0 +1,15 @@
+<div class="container" id="i18_legal">
+    <div class="row align-items-end" id="legal_footer">
+        <div class="col-lg-8 m-t-lg m-b-lg">
+            <p>Build at revision <a href="https://github.com/Chilipp/Jalpc/tree/{{ site.git.last_commit.long_sha }}"><code>{{ site.git.last_commit.short_sha }}</code></a> from <a href="https://github.com/Chilipp/Jalpc">Chilipp/Jalpc</a> on {{ site.git.last_commit.commit_date }}</p>
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, <span id="jalpc_site_pv"><strong>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</strong></span><br><br>
+            <p>This webpage is based on a modified version of the Jalpc Jekyll theme (<a href="http://www.jarrekk.com">www.jarrekk.com</a>, <a title="MIT License of the jarrek/Jalpc repository" href="https://github.com/Chilipp/Jalpc/blob/master/JALPC_LICENSE">MIT license</a>).<br>
+                Icons are provided by <a href="https://fontawesome.com/">fontawesome.com</a>, version 5.7.2 under the <a href="https://fontawesome.com/license">Creative Commons Attribution 4.0 International license</a>, <a href="https://icons8.com/">Icons8</a> under the <a href="https://icons8.com/license">Creative Commons Attribution-NoDerivs 3.0 Unported license</a> and <a href="https://commons.wikimedia.org/wiki/">Wikimedia commons</a> under the <a href="http://opensource.org/licenses/bsd-license.php">BSD license</a></p>
+        </div>
+        <div class="col-lg-4 m-t-lg m-b-lg border-left">
+            <a href="{{ site.author.address_link }}" target="_blank"><span class="navy">{{ site.author.first_name }}<span> {{ site.author.last_name }}</a><br>
+            {{ site.author.address }}
+
+        </div>
+    </div>
+</div>

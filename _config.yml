@@ -24,6 +24,18 @@ author:  # change following line to your infomation.
   orcid: "0000-0001-6171-7716"
   email: philipp.sommer@unil.ch  # Leave blank if you don't have now
   cv:   # An online CV can be printed as PDF, leave blank if you don't have now
+  address_link: https://www.unil.ch/idyst/home/menuinst/people/official-team-table.html?url_params=-v_faculte=90-v_unite=273-v_personne=1178570-mode=fiche&pubsIdParam=dff574887da14a49a77476bc7cbddd13
+  address: |
+    Faculté des géosciences et de l'environnement<br><br>
+
+    Institut des dynamiques de la surface terrestre<br>
+    Position(s): Doctorant FNS<br><br>
+
+    IDYST<br>
+    Quartier UNIL-Mouline<br>
+    Bâtiment Géopolis 4413<br>
+    CH - 1015 Lausanne<br>
+    Phone: +41 21 692 35 40<br>
   # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
   skill_icon1:
     - name: fa-github
