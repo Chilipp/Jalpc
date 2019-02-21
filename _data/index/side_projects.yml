@@ -48,7 +48,6 @@
   repo: sphinx-nbexamples
   img: https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg
   img_title: Cameron Oelsen [BSD (http://opensource.org/licenses/bsd-license.php)], via Wikimedia Commons
-  img_link: https://commons.wikimedia.org/wiki/File:Jupyter_logo.svg
   desc: Include Jupyter notebooks in a sphinx documentation
   long_desc: |
     This python package creates an example gallery for documentations generated
