@@ -1,10 +1,10 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name:
-    detail: Université de Lausanne
+    detail: University of Lausanne, Institute of Earth Surface Dynamics (IDYST)
     i18n: PhD
   desc:
-    detail: Institute of Earth Surface Dynamics (IDYST)
+    detail: Numerical Tools and Software Solutions for Palaeoclimate Analysis
     i18n: PhD_desc
   date:
     detail: Dec. 2015
@@ -18,7 +18,7 @@
     detail: Max-Planck-Institute for Meteorology/University of Hamburg
     i18n: MSc
   desc:
-    detail: Master of Integrated Climate System Sciences
+    detail: Master in Integrated Climate System Sciences
     i18n: MSc_desc
   date:
     detail: Sep. 2013
@@ -46,7 +46,7 @@
     detail: University of Heidelberg
     i18n: BSc
   desc:
-      detail: Bachelor of Physics
+      detail: Bachelor in Physics
       i18n: BSc_desc
   date:
       detail: Sep. 2009
