@@ -9,7 +9,7 @@
     "projects": "Projects",
     "career": "Career",
     "blog": "Blog",
-    "link": "Link",
+    "link": "Links",
     "bibliography": "Publications"
   },
   "about_me":{
@@ -79,7 +79,7 @@
     "my_blog": "My Blog"
   },
   "link":{
-    "link": "Link",
+    "link": "External links",
     "view": "views"
   }
 }
