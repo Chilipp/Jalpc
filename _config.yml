@@ -65,6 +65,7 @@ scholar:
   sort_by: year
   bibliography: "**/*.bib"
   order: descending
+  bibliography_template: bib
 
 ## google optimize
 go:

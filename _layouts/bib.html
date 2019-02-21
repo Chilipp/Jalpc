@@ -1,0 +1,14 @@
+---
+---
+{{ reference }}
+{% if entry.doi %}
+<a href="https://doi.org/{{ entry.doi }}" target="_blank"><i class="fas fa-globe"></i></a>
+{% elsif entry.url %}
+<a href="{{ entry.url }}" target="_blank"><i class="fas fa-globe"></i></a>
+{% endif %}
+{% if entry.pdf_file %}
+<a href="{{ entry.pdf_file }}" target="_blank"><i class="fas fa-file-pdf"></i></a>
+{% endif %}
+{% if entry.abstract %}
+<details class="bib_abstract"><summary><span class="navy">Abstract</span></summary><p>{{ entry.abstract }}</p></details>
+{% endif %}

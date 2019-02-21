@@ -2844,6 +2844,10 @@ details.project_summary[open] summary:after {
   content: "⊖";
 }
 
+details.bib_abstract {
+  display: inline-block;
+}
+
 .accordion {
   background-color: #eee;
   color: #444;
