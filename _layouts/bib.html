@@ -7,7 +7,7 @@
 <a href="{{ entry.url }}" target="_blank"><i class="fas fa-globe"></i></a>
 {% endif %}
 {% if entry.pdf_file %}
-<a href="{{ entry.pdf_file }}" target="_blank"><i class="fas fa-file-pdf"></i></a>
+<a href="{{ entry.pdf_file }}" target="_blank" title="Download the PDF"><i class="fas fa-download"></i></a>
 {% endif %}
 {% if entry.abstract %}
 <details class="bib_abstract"><summary><span class="navy">Abstract</span></summary><p>{{ entry.abstract }}</p></details>
