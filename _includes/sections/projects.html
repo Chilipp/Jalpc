@@ -17,7 +17,7 @@
             {% else %}
             <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
             {% endif %}
-              <div class="team-member">
+              <div class="team-member project-item">
 
                 {% if project.img_link %}
                 <a title="{{ project.img_title }}" href="{{ project.img_link }}">
@@ -65,7 +65,7 @@
 
             <button class="accordion"><h2><span data-i18n="projects.my_side_projects">Side Projects</span></h2></button>
             <div class="panel">
-            <div class="row">
+            <div class="row" id="side_projects_row">
             {% for project in site.data.index.side_projects %}
                 {% assign loopindex = forloop.index | modulo: 2 %}
                 {% if forloop.last %}
@@ -77,7 +77,7 @@
                 {% else %}
                 <div class="col-sm-6">
                 {% endif %}
-                  <div class="team-member">
+                  <div class="team-member project-item">
                       {% if project.img_link %}
                       <a title="{{ project.img_title }}" href="{{ project.img_link }}">
                       {% elsif project.url %}

@@ -2848,6 +2848,11 @@ details.bib_abstract {
   display: inline-block;
 }
 
+details.bib_abstract summary {
+    color: #676a6c;
+    font-weight: 600;
+}
+
 .accordion {
   background-color: #eee;
   color: #444;
@@ -2921,4 +2926,21 @@ details.bib_abstract {
 .align-items-end {
     -ms-flex-align: end   !important;
     align-items: flex-end !important;
+}
+
+.bibliography a {
+    color: #676a6c;
+}
+
+.bibliography a:focus, a:hover {
+    color: #aeaeae;
+}
+
+.project-item {
+    a {
+        color: #676a6c;
+    }
+    a:focus, a:hover {
+        color: #aeaeae;
+    }
 }
