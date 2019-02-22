@@ -40,4 +40,5 @@
   i18n: nav.legal
   name: Legal Notice
   tpl: legal.html
-  css: 
+  exclude_nav: true
+  css:
