@@ -5,3 +5,7 @@ group :jekyll_plugins do
     gem 'jekyll-scholar'
     gem 'jekyll-git_metadata'
 end
+
+group :test do
+    gem 'rake'
+end
