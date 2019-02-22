@@ -34,7 +34,7 @@ permalink: /
           {% for language in site.data.index.language %}
           <li>
             <a id="set_lang_{{ language.locale }}" class="btn btn-sm set_{{ language.locale }}" data-locale="{{ language.locale }}">
-              <img src="{{ language.flag | prepend: site.baseurl }}" height="16" width="16">
+              <img src="{{ language.flag | prepend: site.baseurl }}" alt="{{ language.locale }}" title="{{ language.name }}" height="16" width="16">
             </a>
           </li>
           {% endfor %}

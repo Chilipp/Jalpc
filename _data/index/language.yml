@@ -7,5 +7,7 @@
 
 - locale: en
   flag: /static/assets/img/flags/United-States.png
+  name: English
 - locale: de
   flag: /static/assets/img/flags/Germany.png
+  name: German

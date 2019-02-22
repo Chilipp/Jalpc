@@ -28,7 +28,7 @@
                 {% endif %}
 
                 {% if project.img %}
-                <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
+                <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="{{ project.name }}">
                 {% elsif project.icon %}
                 <i class="{% if project.icon_style %} {{ project.icon_style }} {% else %} fas {% endif %} {{ project.icon | prepend: site.baseurl }} fa-5x"></i>
                 {% endif %}
@@ -87,7 +87,7 @@
                       {% endif %}
 
                       {% if project.img %}
-                      <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
+                      <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="{{ project.name }}">
                       {% elsif project.icon %}
                       <i class="{% if project.icon_style %} {{ project.icon_style }} {% else %} fas {% endif %} {{ project.icon | prepend: site.baseurl }} fa-5x"></i>
                       {% endif %}
