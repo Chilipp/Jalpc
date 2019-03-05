@@ -2897,7 +2897,7 @@ details.bib_abstract summary:hover {
     content: '';
 }
 
-@media only screen and (orientation: landscape) and (max-width: 767px) {
+@media only screen and (orientation: landscape) and (max-height: 768px) {
     .chart-container {
         position: relative;
         width: 90vh;
