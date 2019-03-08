@@ -1,6 +1,18 @@
 # skills section data
 
-label: Skill
-id : gs
-aspects: Open Source Software development, GitHub, Teaching, Data Analysis, Visualization, Coding, Statistics, Conceptualization
-percentage: 100, 80, 50, 70, 70, 100, 80, 50
+- name: Open Source Software development
+  percentage: 100
+- name: GitHub
+  percentage: 80
+- name: Teaching
+  percentage: 50
+- name: Data Analysis
+  percentage: 70
+- name: Visualization
+  percentage: 70
+- name: Coding
+  percentage: 100
+- name: Statistics
+  percentage: 80
+- name: Conceptualization
+  percentage: 50

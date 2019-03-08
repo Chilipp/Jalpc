@@ -7,28 +7,28 @@
     </div>
     <div class="row features-block">
         <div class="wow zoomIn col-lg-6 landscape-col-xs-offset-3">
-            <div class="chart-container" id="container_{{ site.data.index.skills.id }}">
-                <canvas id="{{ site.data.index.skills.id }}" height="500" width="500"></canvas>
+            <div class="chart-container" id="container_gs">
+                <canvas id="gs" height="500" width="500"></canvas>
             </div>
         </div>
         <div class="wow zoomIn col-lg-6 landscape-col-xs-offset-3">
-            <div class="chart-container" id="container_{{ site.data.index.language_skills.id }}">
-                <canvas id="{{ site.data.index.language_skills.id }}" height="500" width="500"></canvas>
+            <div class="chart-container" id="container_cs">
+                <canvas id="cs" height="500" width="500"></canvas>
             </div>
         </div>
         <script>
-        var ctx = document.getElementById("{{ site.data.index.skills.id }}");
+        var ctx = document.getElementById("gs");
         var data = {
-            labels: "{{ site.data.index.skills.aspects }}".split(","),
+            labels: "{% for skill in site.data.index.skills %}{{ skill.name }}{% unless forloop.last %},{% endunless %}{% endfor %}".split(","),
             datasets: [{
-                label: "{{ site.data.index.skills.label }}",
+                label: "Skill",
                 backgroundColor: "rgba(179,181,198,0.2)",
                 borderColor: "#3385FF",
                 pointBackgroundColor: "#3385FF",
                 pointBorderColor: "#fff",
                 pointHoverBackgroundColor: "#3385FF",
                 pointHoverBorderColor: "#3385FF",
-                data: [{{ site.data.index.skills.percentage }}]
+                data: [{% for skill in site.data.index.skills %}{{ skill.percentage }}{% unless forloop.last %}, {% endunless %}{% endfor %}]
                 }]
         };
         var myRadarChart = new Chart(ctx, {
@@ -50,18 +50,18 @@
         });
         </script>
         <script>
-        var ctx = document.getElementById("{{ site.data.index.language_skills.id }}");
+        var ctx = document.getElementById("cs");
         var data = {
-            labels: "{{ site.data.index.language_skills.aspects }}".split(","),
+            labels: "{% for skill in site.data.index.language_skills %}{{ skill.name }}{% unless forloop.last %},{% endunless %}{% endfor %}".split(","),
             datasets: [{
-                label: "{{ site.data.index.language_skills.label }}",
+                label: "Coding skills",
                 backgroundColor: "rgba(179,181,198,0.2)",
                 borderColor: "#3385FF",
                 pointBackgroundColor: "#3385FF",
                 pointBorderColor: "#fff",
                 pointHoverBackgroundColor: "#3385FF",
                 pointHoverBorderColor: "#3385FF",
-                data: [{{ site.data.index.language_skills.percentage }}]
+                data: [{% for skill in site.data.index.language_skills %}{{ skill.percentage }}{% unless forloop.last %}, {% endunless %}{% endfor %}]
                 }]
         };
         var myRadarChart = new Chart(ctx, {
