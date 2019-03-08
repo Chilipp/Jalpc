@@ -20,9 +20,9 @@
               <div class="team-member project-item">
 
                 {% if project.img_link %}
-                <a title="{{ project.img_title }}" href="{{ project.img_link }}">
+                <a title="{{ project.img_title }}" href="{{ project.img_link }}" target="_blank">
                 {% elsif project.url %}
-                <a title="{{ project.img_title }}" href="{{ project.url }}">
+                <a title="{{ project.img_title }}" href="{{ project.url }}" target="_blank">
                 {% elsif project.repo %}
                 <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank">
                 {% endif %}
