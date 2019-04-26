@@ -41,7 +41,7 @@ h3, h4, h5 {
   font-weight: 600;
 }
 
-.nav {
+.nav-custom {
   > li > a {
     color: #a7b1c2;
     font-weight: 600;
@@ -55,14 +55,14 @@ h3, h4, h5 {
   }
 }
 
-.navbar-default .nav > li > a {
+.navbar-default .nav-custom > li > a {
   &:focus, &:hover {
     background-color: #293846;
     color: #fff;
   }
 }
 
-.nav.navbar-top-links > li > a {
+.nav-custom.navbar-top-links > li > a {
   &:focus, &:hover {
     background-color: transparent;
   }
@@ -72,7 +72,7 @@ h3, h4, h5 {
   background-color: transparent;
 }
 
-.nav > li > a i {
+.nav-custom > li > a i {
   margin-right: 6px;
 }
 
@@ -109,7 +109,7 @@ h3, h4, h5 {
   background: url(patterns/header-profile.png) no-repeat;
 }
 
-.nav > li.active {
+.nav-custom > li.active {
   border-left: 4px solid #3385FF;
   background: #293846;
 }
@@ -131,7 +131,7 @@ h3, h4, h5 {
   display: inline-table;
 }
 
-.nav.navbar-top-links a {
+.nav-custom.navbar-top-links a {
   font-size: 14px;
 }
 
@@ -219,7 +219,7 @@ body.canvas-menu .nav-header {
   .navbar {
     margin-bottom: 0;
   }
-  .nav > li {
+  .nav-custom > li {
     > a {
       padding: 15px 20px;
       color: #676a6c;
@@ -2410,7 +2410,7 @@ body {
     background-color: transparent;
     border-color: transparent;
     transition: all .3s ease-in-out 0s;
-    .nav li a {
+    .nav-custom li a {
       color: #fff;
       font-family: 'Open Sans', helvetica, arial, sans-serif;
       font-weight: 700;
@@ -2466,7 +2466,7 @@ body {
       transition: all .3s ease-in-out 0s;
     }
   }
-  .navbar-scroll.navbar-default .nav li a {
+  .navbar-scroll.navbar-default .nav-custom li a {
     color: #676a6c;
     &:hover {
       color: #3385FF;
@@ -2478,7 +2478,7 @@ body {
     border-bottom: 1px solid #e7eaec;
     border-radius: 0;
   }
-  .nav > li {
+  .nav-custom > li {
     &.active {
       border: none;
       background: inherit;
@@ -2777,7 +2777,7 @@ body {
         background: 0 0;
         color: inherit;
       }
-      .nav li a {
+      .nav-custom li a {
         color: #676a6c;
         &:hover {
           color: #3385FF;
@@ -2790,7 +2790,7 @@ body {
       border-bottom: 1px solid #e7eaec;
       border-radius: 0;
     }
-    .nav > li > a {
+    .nav-custom > li > a {
       padding: 25px 10px 15px;
     }
     .navbar-nav > li > a {
@@ -2844,6 +2844,12 @@ details.project_summary[open] summary:after {
   content: "⊖";
 }
 
+details.project_summary {
+    .project-desc {
+        color: #aeaeae;
+    }
+}
+
 details.bib_abstract {
   display: inline-block;
 }
@@ -2869,7 +2875,7 @@ details.bib_abstract summary:hover {
   transition: 0.4s;
 }
 
-.active, .accordion:hover {
+.active.accordion:hover {
   background-color: #ccc;
 }
 
@@ -2880,24 +2886,32 @@ details.bib_abstract summary:hover {
   overflow: hidden;
 }
 
-.list-inline#keyword_list{
-    display:block;
+.dotted-items{
+    display: block;
 }
 
-.list-inline#keyword_list li{
+.dotted-items li{
     display:inline-block;
+}
+
+.dotted-items#keyword_list li{
     color: #aeaeae;
 }
 
-.list-inline#keyword_list li:after{
+.dotted-items li:after{
     content:'·';
     margin:0 10px;
 }
-.list-inline#keyword_list li:last-child:after {
+.dotted-items li:last-child:after {
     content: '';
 }
 
-@media only screen and (orientation: landscape) and (max-height: 768px) {
+.desc-items li:first-child:after {
+    content: ':';
+    margin: 0 0px;
+}
+
+@media only screen and (orientation: landscape) and (max-width: 1024px) {
     .chart-container {
         position: relative;
         width: 90vh;
@@ -2939,4 +2953,24 @@ details.bib_abstract summary:hover {
     a:focus, a:hover {
         color: #aeaeae;
     }
+}
+
+.skill-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #aeaeae;
+    table-layout: fixed;
+
+    .list-group-item {
+        background-color: #eee;
+        color: #337ab7;
+    }
+}
+
+#skill-desc-gs {
+    color: #676a6c;
+}
+
+#skill-desc-cs {
+    color: #676a6c;
 }

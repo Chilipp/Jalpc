@@ -14,6 +14,17 @@
     precipitation, temperature, and cloud cover from monthly to daily resolution.
     <br>
     More at <a href="https://arve-research.github.io/gwgen/">arve-research.gihub.io/gwgen</a>
+  skills:
+    - Github
+    - Open Source Software development
+    - Data Analysis
+    - Coding
+    - Statistics
+    - Conceptualization
+    - Python
+    - FORTRAN
+    - R
+    - Postgres
 
 - name: IUCm
   i18n: iucm
@@ -27,6 +38,13 @@
     that cut down emissions related to energy consumption from urban mobility.
     <br>
     More at <a href="https://iucm.readthedocs.io">iucm.readthedocs.io</a>
+  skills:
+    - Github
+    - Open Source Software development
+    - Coding
+    - Statistics
+    - Conceptualization
+    - Python
 
 - name: docrep
   i18n: docrep
@@ -41,6 +59,11 @@
     well-documented software.
     <br>
     More at <a href="https://docrep.readthedocs.io">docrep.readthedocs.io</a>
+  skills:
+    - Github
+    - Open Source Software development
+    - Coding
+    - Python
 
 - name: sphinx-nbexamples
   i18n: sphinx-nbexamples
@@ -54,6 +77,11 @@
     by pythons sphinx package out of a bunch of jupyter notebooks.
     <br>
     More examples at <a href="https://sphinx-nbexamples.readthedocs.io">sphinx-nbexamples.readthedocs.io</a>
+  skills:
+    - Github
+    - Open Source Software development
+    - Coding
+    - Python
 
 - name: model-organization
   i18n: model-organization
@@ -62,6 +90,12 @@
   icon_style: fab
   icon: fa-python
   desc: Python package for a transparent organization of computational models
+  skills:
+    - Github
+    - Open Source Software development
+    - Coding
+    - Conceptualization
+    - Python
 
 - name: funcargparse
   i18n: funcargparse
@@ -70,3 +104,9 @@
   icon_style: fab
   icon: fa-python
   desc: Python package to create command line parsers from docstrings
+  skills:
+    - Github
+    - Open Source Software development
+    - Coding
+    - Conceptualization
+    - Python

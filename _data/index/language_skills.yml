@@ -2,17 +2,45 @@
 
 - name: Python
   percentage: 100
+  desc: |
+    Python is my main programming language that I use for almost everything on the computer. For the post processing of climate model data I am using <a href="http://xarray.pydata.org/en/stable/">xarray</a> and <a href="http://docs.dask.org/en/latest/">dask</a>, libraries for multi-dimensional datasets that support out-of-core computing. Other types of data are mainly analysed with <a href="https://pandas.pydata.org/">pandas</a>, <a href="https://www.numpy.org/">numpy</a> and <a href="https://scikit-learn.org/">scikit-learn</a>. Additionally I have expert knowledge about the <a href="https://matplotlib.org/">matplotlib</a> package that I use for visualizations and the <a href="https://www.riverbankcomputing.com/software/pyqt/intro">PyQt</a> package that I use for the development of graphical user interfaces.
+    <br>
+    Most of my time, I spend with the development of new python software for climate analysis. Besides my larger projects, <a href="https://psyplot.readthedocs.io">psyplot</a>, it's <a href="https://psyplot.readthedocs.io/en/latest/plugins.html">plugins</a> and <a href="https://straditize.readthedocs.io">straditize</a>, I also developed multiple small python packages mostly targeting other python developers. These packages involve
+
+    <ul>
+    <li><a href="https://docrep.readthedocs.io">docrep</a>: A Python Module for intelligent reuse of docstrings</li>
+    <li><a href="https://funcargparse.readthedocs.io">funcargparse</a>: A python package for a simple creation of command-line tools out of python functions</li>
+    <li><a href="https://sphinx-nbexamples.readthedocs.io">sphinx-nbexamples</a>: A python package for publishing jupyter notebooks as examples in a documentation</li>
+    <li><a href="https://autodocsumm.readthedocs.io">autodocsumm</a>: A python package for automated summaries in an automated documentation</li>
+    </ul>
+    and other packages that are all publicly available on <a href="https://pypi.org/user/Chilipp/" target="_blank">PyPi</a> and <a href="https://github.com/conda-forge?utf8=%E2%9C%93&q=Chilipp+in%3Areadme" target="_blank">anaconda (via conda-forge)</a>.
+
+    Finally, to communicate my data analysis to my colleagues, I am using jupyter notebooks from which I then often interface into other languages,
+    such as<a href="javascript:switch2desc('R')">R</a>, <a href="javascript:switch2desc('Matlab')">Matlab</a> or <a href="javascript:switch2desc('Postgres')">Postgres</a>. In the rare cases where I need more computational efficiency and cannot solve it with numpy, I also use <a href="https://cython.org/">Cython</a>.
 - name: R
   percentage: 50
+  desc: |
+    I use R for statistical analysis when Python is not good enough (or too complicated). This involves inverse modelling for climate reconstructions based on proxy data, e.g. through the <a href="https://www.rdocumentation.org/packages/rioja">rioja</a> package, but also for rotated principal component analysis that we use in the HORNET project.
 - name: MATLAB
   percentage: 40
+  desc: |
+    Matlab was one of the first programming languages I learned during my master. I dropped the development with it in favor of the more flexibel open source languages <a href="javascript:switch2desc('Python')">Python</a> and <a href="javascript:switch2desc('R')">R</a>. However, I am still using it sometimes for collaborations with other scientists that only code in Matlab.
 - name: FORTRAN
   percentage: 70
+  desc: |
+    Although many software developers roll their eyes when you start talking about FORTRAN, climate models are still based on this old but very efficient language. And as such, I started very soon to develop numerical computational models in FORTRAN. During my master I worked with the <a href="https://mpimet.mpg.de/en/science/models/mpi-esm/">Max-Planck-Institutes Earth-System-Model (MPI-ESM)</a>, a parallelized coupled model of atmosphere, ocean and land surface. I worked with the parallelization of the MPI-ESM via OpenMP, and I developed my own statistical weather generator <a href="https://github.com/ARVE-Research/gwgen_f90">GWGEN</a>.
 - name: Bash
   percentage: 90
+  desc: |
+    I am using the terminal more than any other software, and as such I am constantly using Bash. Not so much in scripts, but rather interactively from the command line. Nevertheless I am also sometimes computing from the command line using, for example, Climate Data Operators (CDOs) or NetCDF Operators (NCOs).
 - name: C/C++
   percentage: 30
+  desc: I can read and write C and C++ but so far there were not so many possible applications for me to use it since all the HPC applications that I worked with are written in FORTRAN. But I am keen to improve my skills with these languages in the near future.
 - name: Postgres
   percentage: 60
+  desc: |
+    In our pollen assemblage projects, namely the <a href="http://p3.snf.ch/project-169598" title="Holocene Climate Reconstruction for the Northern Hemisphere Extra-tropics">HORNET</a> and the <a href="https://EMPD2.github.io" title="Eurasian Modern Pollen Database">EMPD</a> projects, we are distributing the data as a relational postgres database. The EMPD-admin, the automated adminstration webapp for the EMPD, reads and writes to this postgres database and uses it as a test for new contributions whether the comply with the standards of the database.
 - name: Javascript
   percentage: 30
+  desc: |
+    I am not a frontend web developper by training, but I nevertheless used HTML and Javascript several times to share my work with colleagues. The web interface of the EMPD, hosted at a href="https://EMPD2.github.io">EMPD2.github.io</a> is one example for it. Here I combine free services of Github and Heroku to create a web interface for collaborators into the EMPD.

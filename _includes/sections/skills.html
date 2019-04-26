@@ -1,86 +1,103 @@
-<div class="container">
+{% assign all_projects = site.data.index.projects | concat: site.data.index.side_projects %}
+{% assign first_language = site.data.index.language_skills[0] %}
+{% assign first_general = site.data.index.skills[0] %}
+
+<div class="container" id="i18_skills">
+
+    {% assign all_skills = site.data.index.skills | concat: site.data.index.language_skills %}
     <div class="row">
-        <div class="col-lg-12 text-center" id="i18_skills">
+        <div class="col-lg-12 text-center">
             <div class="navy-line"></div>
             <h1><span data-i18n="skills.my_skills">My Skills</span></h1>
         </div>
     </div>
-    <div class="row features-block">
-        <div class="wow zoomIn col-lg-6 landscape-col-xs-offset-3">
-            <div class="chart-container" id="container_gs">
-                <canvas id="gs" height="500" width="500"></canvas>
-            </div>
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 alert alert-info alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <span data-i18n="[html]skills.info">Click on the diagram labels for more info or go to <i>Descriptions</i>.</span>
         </div>
-        <div class="wow zoomIn col-lg-6 landscape-col-xs-offset-3">
-            <div class="chart-container" id="container_cs">
-                <canvas id="cs" height="500" width="500"></canvas>
-            </div>
-        </div>
-        <script>
-        var ctx = document.getElementById("gs");
-        var data = {
-            labels: "{% for skill in site.data.index.skills %}{{ skill.name }}{% unless forloop.last %},{% endunless %}{% endfor %}".split(","),
-            datasets: [{
-                label: "Skill",
-                backgroundColor: "rgba(179,181,198,0.2)",
-                borderColor: "#3385FF",
-                pointBackgroundColor: "#3385FF",
-                pointBorderColor: "#fff",
-                pointHoverBackgroundColor: "#3385FF",
-                pointHoverBorderColor: "#3385FF",
-                data: [{% for skill in site.data.index.skills %}{{ skill.percentage }}{% unless forloop.last %}, {% endunless %}{% endfor %}]
-                }]
-        };
-        var myRadarChart = new Chart(ctx, {
-            type: 'radar',
-            data: data,
-            options: {
-                scale: {
-                    responsive: true,
-                    ticks: {min: 0, max: 100},
-                    lineArc: false,
-                    pointLabels: {fontSize: 14},
-                },
-                legend: {display: false},
-                title: {
-                    display: true,
-                    text: 'General skills'
-                },
-            }
-        });
-        </script>
-        <script>
-        var ctx = document.getElementById("cs");
-        var data = {
-            labels: "{% for skill in site.data.index.language_skills %}{{ skill.name }}{% unless forloop.last %},{% endunless %}{% endfor %}".split(","),
-            datasets: [{
-                label: "Coding skills",
-                backgroundColor: "rgba(179,181,198,0.2)",
-                borderColor: "#3385FF",
-                pointBackgroundColor: "#3385FF",
-                pointBorderColor: "#fff",
-                pointHoverBackgroundColor: "#3385FF",
-                pointHoverBorderColor: "#3385FF",
-                data: [{% for skill in site.data.index.language_skills %}{{ skill.percentage }}{% unless forloop.last %}, {% endunless %}{% endfor %}]
-                }]
-        };
-        var myRadarChart = new Chart(ctx, {
-            type: 'radar',
-            data: data,
-            options: {
-                scale: {
-                    responsive: true,
-                    ticks: {min: 0, max: 100},
-                    lineArc: false,
-                    pointLabels: {fontSize: 14},
-                },
-                legend: {display: false},
-                title: {
-                    display: true,
-                    text: 'Programming languages'
-                },
-            }
-        });
-        </script>
     </div>
+    <div class="row features-block">
+        <div class="col-lg-6 landscape-col-xs-offset-3 wow fadeInLeft" id='div-gs'>
+            <h2 style="text-align:center;"><span data-i18n="skills.general">General skills</span></h2>
+            <br>
+            <ul class="nav nav-tabs" role="tablist" id="gs-tabs">
+                <li role="presentation" aria-controls="container_gs" class="active"><a href="#container_gs" role="tab" data-toggle="tab"><span data-i18n="skills.diagram">Diagram</span></a></li>
+                <li role="presentation" aria-controls="skill-gs"><a href="#skill-gs" role="tab" data-toggle="tab"><span data-i18n="skills.desc">Descriptions</span></a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="container_gs">
+                    <div class="chart-container" id="container_gs">
+                        <canvas id="gs" height="500" width="500"></canvas>
+                    </div>
+                </div>
+
+                <div role="tabpanel" class="tab-pane" id="skill-gs">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="gsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <h2 id="skill-name-gs">All skills
+                            <span class="caret"></span></h2>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="gsMenu">
+                            <li><a href='javascript:switch2desc("All skills")'>All skills</a></li>
+                            {% for skill in site.data.index.skills %}
+                                <li><a href='javascript:switch2desc("{{ skill.name }}")'>{{ skill.name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <p id="skill-desc-gs"></p>
+                    <table class="skill-table" id="table-gs">
+                        {% tablerow skill in site.data.index.skills cols:2%}
+                            <a href='javascript:switch2desc("{{ skill.name }}")' class="list-group-item">{{ skill.name }}</a>
+                        {% endtablerow %}
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-lg-6 landscape-col-xs-offset-3 wow fadeInRight" id='div-cs'>
+            <h2 style="text-align:center;"><span data-i18n="skills.coding">Programming languages</span></h2><br>
+            <ul class="nav nav-tabs" role="tablist" id="cs-tabs">
+                <li role="presentation" aria-controls="container_cs" class="active"><a href="#container_cs" role="tab" data-toggle="tab"><span data-i18n="skills.diagram">Diagram</span></a></li>
+                <li role="presentation" aria-controls="skill-cs"><a href="#skill-cs" role="tab" data-toggle="tab"><span data-i18n="skills.desc">Descriptions</span></a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="container_cs">
+                    <div class="chart-container" id="container_cs">
+                        <canvas id="cs" height="500" width="500"></canvas>
+                    </div>
+                </div>
+
+                <div role="tabpanel" class="tab-pane" id="skill-cs">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="csMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <h2 id="skill-name-cs">All languages
+                            <span class="caret"></span></h2>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="csMenu">
+                            <li><a href='javascript:switch2desc("All languages")'>All languages</a></li>
+                            {% for skill in site.data.index.language_skills %}
+                                <li><a href='javascript:switch2desc("{{ skill.name }}")'>{{ skill.name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <p id="skill-desc-cs"></p>
+                    <table class="skill-table" id="table-cs">
+                        {% tablerow skill in site.data.index.language_skills cols:2%}
+                            <a href='javascript:switch2desc("{{ skill.name }}")' class="list-group-item">{{ skill.name }}</a>
+                        {% endtablerow %}
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        {% include sections/skills.js %}
+    </script>
 </div>

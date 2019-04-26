@@ -8,90 +8,32 @@
     <div class="row">
         {% for project in site.data.index.projects %}
             {% assign loopindex = forloop.index | modulo: 2 %}
-            {% if forloop.last %}
-                {% if forloop.last == forloop.first %}
-            <div class="col-sm-6 wow col-sm-offset-3 zoomIn">
-                {% else %}
-            <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft col-sm-offset-3 {% else %} fadeInRight {% endif %}">
-                {% endif %}
-            {% else %}
-            <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
-            {% endif %}
-              <div class="team-member project-item">
-
-                {% if project.img_link %}
-                <a title="{{ project.img_title }}" href="{{ project.img_link }}" target="_blank">
-                {% elsif project.url %}
-                <a title="{{ project.img_title }}" href="{{ project.url }}" target="_blank">
-                {% elsif project.repo %}
-                <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank">
-                {% endif %}
-
-                {% if project.img %}
-                <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="{{ project.name }}">
-                {% elsif project.icon %}
-                <i class="{% if project.icon_style %} {{ project.icon_style }} {% else %} fas {% endif %} {{ project.icon | prepend: site.baseurl }} fa-5x"></i>
-                {% endif %}
-                {% if project.img_link or project.url or project.repo %}</a> {% endif %}
-                  <h4>
-                  {% if project.url %}
-                  <a href="{{ project.url }}" target="_blank"><span class="navy">{{ project.name }}</span></a>
-                  {% elsif project.repo %}
-                  <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank"><span class="navy">{{ project.name }}</span></a>
-                  {% else %}
-                  <span class="navy">{{ project.name }}</span>
-                  {% endif %}
-                  </h4>
-                  <p><span data-i18n="projects.{{ project.i18n }}">{{ project.desc }}</span></p>
-                  {% if project.long_desc %}
-                  <details class="project_summary"><summary></summary><div style="text-align: justify;"><span data-i18n="[html]projects.{{ project.i18n }}_desc">{{ project.long_desc }}</span></div></details>
-                  {% endif %}
-                  {% if project.repo %}
-                  <div user="{{ project.gh_user }}" repo="{{ project.repo }}" class="ghbtn">
-                      <a target="_blank" style="width: 65px;" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/stargazers" class="btn btn-white btn-xs star"><i class="fas fa-star"></i> ...</a>&emsp;&emsp;
-                      <a target="_blank" style="width: 65px;" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/network" class="btn btn-white btn-xs fork"><i class="fas fa-code-fork"></i> ...</a>
-                      <div style="height: 10px;"></div>
-                  </div>
-                  {% endif %}
-              </div>
-            </div>
-      {% endfor %}
-            <br>
-    </div>
-
-    <div class="row m-b-lg">
-        <div class="col-lg-12 text-center">
-            <div class="navy-line"></div>
-
-            <button class="accordion"><h2><span data-i18n="projects.my_side_projects">Side Projects</span></h2></button>
-            <div class="panel">
-            <div class="row" id="side_projects_row">
-            {% for project in site.data.index.side_projects %}
-                {% assign loopindex = forloop.index | modulo: 2 %}
+            {% if loopindex == 1 %}<div class="row">{% endif %}
                 {% if forloop.last %}
                     {% if forloop.last == forloop.first %}
-                <div class="col-sm-6 col-sm-offset-3">
+                <div class="col-sm-6 wow col-sm-offset-3 zoomIn">
                     {% else %}
-                <div class="col-sm-6 {% if loopindex == 1 %} col-sm-offset-3 {% endif %}">
+                <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft col-sm-offset-3 {% else %} fadeInRight {% endif %}">
                     {% endif %}
                 {% else %}
-                <div class="col-sm-6">
+                <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
                 {% endif %}
                   <div class="team-member project-item">
-                      {% if project.img_link %}
-                      <a title="{{ project.img_title }}" href="{{ project.img_link }}">
-                      {% elsif project.url %}
-                      <a title="{{ project.img_title }}" href="{{ project.url }}">
-                      {% elsif project.repo %}
-                      <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank">
-                      {% endif %}
 
-                      {% if project.img %}
-                      <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="{{ project.name }}">
-                      {% elsif project.icon %}
-                      <i class="{% if project.icon_style %} {{ project.icon_style }} {% else %} fas {% endif %} {{ project.icon | prepend: site.baseurl }} fa-5x"></i>
-                      {% endif %}
-                      {% if project.img_link or project.url or project.repo %}</a> {% endif %}
+                    {% if project.img_link %}
+                    <a title="{{ project.img_title }}" href="{{ project.img_link }}" target="_blank">
+                    {% elsif project.url %}
+                    <a title="{{ project.img_title }}" href="{{ project.url }}" target="_blank">
+                    {% elsif project.repo %}
+                    <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank">
+                    {% endif %}
+
+                    {% if project.img %}
+                    <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="{{ project.name }}">
+                    {% elsif project.icon %}
+                    <i class="{% if project.icon_style %} {{ project.icon_style }} {% else %} fas {% endif %} {{ project.icon | prepend: site.baseurl }} fa-5x"></i>
+                    {% endif %}
+                    {% if project.img_link or project.url or project.repo %}</a> {% endif %}
                       <h4>
                       {% if project.url %}
                       <a href="{{ project.url }}" target="_blank"><span class="navy">{{ project.name }}</span></a>
@@ -102,9 +44,24 @@
                       {% endif %}
                       </h4>
                       <p><span data-i18n="projects.{{ project.i18n }}">{{ project.desc }}</span></p>
-                      {% if project.long_desc %}
-                      <details class="project_summary"><summary></summary><div style="text-align: justify;"><span data-i18n="[html]projects.{{ project.i18n }}_desc">{{ project.long_desc }}</span></div></details>
-                      {% endif %}
+                      <details class="project_summary">
+                          <summary></summary>
+                          {% if project.long_desc %}
+                          <div class="project-desc" style="text-align: justify;">
+                              <span data-i18n="[html]projects.{{ project.i18n }}_desc">{{ project.long_desc }}
+                              </span>
+                          </div>
+                          {% endif %}
+                          <br>
+                          <div style="text-align: left;">
+                              <ul class='list-inline dotted-items desc-items'>
+                                  <li><span>Used skills</span></li>
+                                  {% for skill in project.skills %}
+                                  <li><a href='javascript:switch2desc("{{ skill }}")'><span>{{ skill }}</span></a></li>
+                                  {% endfor %}
+                              </ul>
+                          </div>
+                      </details>
                       {% if project.repo %}
                       <div user="{{ project.gh_user }}" repo="{{ project.repo }}" class="ghbtn">
                           <a target="_blank" style="width: 65px;" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/stargazers" class="btn btn-white btn-xs star"><i class="fas fa-star"></i> ...</a>&emsp;&emsp;
@@ -114,6 +71,82 @@
                       {% endif %}
                   </div>
                 </div>
+            {% if loopindex == 0 %}</div>{% endif %}
+      {% endfor %}
+            <br>
+    </div>
+
+    <div class="row m-b-lg">
+        <div class="col-lg-12 text-center">
+            <div class="navy-line"></div>
+
+            <button class="accordion"><h2><span data-i18n="projects.my_side_projects">Side Projects</span></h2></button>
+            <div class="panel">
+            {% for project in site.data.index.side_projects %}
+                {% assign loopindex = forloop.index | modulo: 2 %}
+                {% if loopindex == 1 %}<div class="row">{% endif %}
+                    {% if forloop.last %}
+                        {% if forloop.last == forloop.first %}
+                    <div class="col-sm-6 col-sm-offset-3">
+                        {% else %}
+                    <div class="col-sm-6 {% if loopindex == 1 %} col-sm-offset-3 {% endif %}">
+                        {% endif %}
+                    {% else %}
+                    <div class="col-sm-6">
+                    {% endif %}
+                      <div class="team-member project-item">
+                          {% if project.img_link %}
+                          <a title="{{ project.img_title }}" href="{{ project.img_link }}">
+                          {% elsif project.url %}
+                          <a title="{{ project.img_title }}" href="{{ project.url }}">
+                          {% elsif project.repo %}
+                          <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank">
+                          {% endif %}
+
+                          {% if project.img %}
+                          <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="{{ project.name }}">
+                          {% elsif project.icon %}
+                          <i class="{% if project.icon_style %} {{ project.icon_style }} {% else %} fas {% endif %} {{ project.icon | prepend: site.baseurl }} fa-5x"></i>
+                          {% endif %}
+                          {% if project.img_link or project.url or project.repo %}</a> {% endif %}
+                          <h4>
+                          {% if project.url %}
+                          <a href="{{ project.url }}" target="_blank"><span class="navy">{{ project.name }}</span></a>
+                          {% elsif project.repo %}
+                          <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank"><span class="navy">{{ project.name }}</span></a>
+                          {% else %}
+                          <span class="navy">{{ project.name }}</span>
+                          {% endif %}
+                          </h4>
+                          <p><span data-i18n="projects.{{ project.i18n }}">{{ project.desc }}</span></p>
+                          <details class="project_summary">
+                              <summary></summary>
+                              {% if project.long_desc %}
+                              <div class="project-desc" style="text-align: justify;">
+                                  <span data-i18n="[html]projects.{{ project.i18n }}_desc">{{ project.long_desc }}
+                                  </span>
+                              </div>
+                              {% endif %}
+                              <br>
+                              <div style="text-align: left;">
+                                  <ul class='list-inline dotted-items desc-items'>
+                                      <li><span>Used skills</span></li>
+                                      {% for skill in project.skills %}
+                                      <li><a href='javascript:switch2desc("{{ skill }}")'><span>{{ skill }}</span></a></li>
+                                      {% endfor %}
+                                  </ul>
+                              </div>
+                          </details>
+                          {% if project.repo %}
+                          <div user="{{ project.gh_user }}" repo="{{ project.repo }}" class="ghbtn">
+                              <a target="_blank" style="width: 65px;" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/stargazers" class="btn btn-white btn-xs star"><i class="fas fa-star"></i> ...</a>&emsp;&emsp;
+                              <a target="_blank" style="width: 65px;" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/network" class="btn btn-white btn-xs fork"><i class="fas fa-code-fork"></i> ...</a>
+                              <div style="height: 10px;"></div>
+                          </div>
+                          {% endif %}
+                      </div>
+                    </div>
+                {% if loopindex == 0 %}</div>{% endif %}
             {% endfor %}
             <br>
             </div>

@@ -2,17 +2,69 @@
 
 - name: Open Source Software development
   percentage: 100
-- name: GitHub
-  percentage: 80
+  seealso:
+      - Github
+      - Coding
+      - Conceptualization
+  desc: |
+      Most of the tools I develop are available as open source packages on <a href="https://github.com/Chilipp?tab=repositories">Github</a>. As such, my workflow is based on multiple services freely available for open source projects. These services allow me to automatically test, monitor, document and distribute my packages. The services I use in particular are
+
+      <ul>
+        <li><b>Continuous integration services for automated tests:</b> <a href="https://travis-ci.org/Chilipp/" title="Software projects on Travis" target="_blank">Travis CI</a> and <a href="https://www.appveyor.com/" target="_blank">Appveyor</a></li>
+        <li><b>Monitoring of the test coverage:</b> <a href="https://coveralls.io/github/Chilipp/" target="_blank">Coveralls.io</a> and <a href="https://codecov.io/gh/Chilipp" target="_blank">codecov.io</a></li>
+        <li><b>Documentation creation and hosting:</b> <a href="https://readthedocs.org/" target="_blank">Read the Docs</a></li>
+        <li><b>Packaging services:</b> <a href="https://pypi.org/user/Chilipp/" target="_blank">PyPi</a> and <a href="https://github.com/conda-forge?utf8=%E2%9C%93&q=Chilipp+in%3Areadme" target="_blank">conda (via conda-forge)</a></li>
+      </ul>
+- name: Github
+  percentage: 100
+  seealso:
+      - Open Source Software development
+  desc: |
+    I use the version control system git to allow a transparent and collaborative working environment. The source code of all the software packages I develop is hosted on Github and I use it also for private repositories to share my intermediate results with project collaborators.
+
+    In addition to the CI services (see the <a href="javascript:switch2desc('Open Source Software development')">section on open source software development</a>) I am also using the Github API for the automated administration of the Eurasian Modern Pollen Database (EMPD) through a webapp, the <a href="https://github.com/EMPD2/EMPD-admin" target="_blank">EMPD-admin</a>.
 - name: Teaching
   percentage: 50
+  desc: |
+    During my Bachelor I worked as a tutor for Linear Algebra I and II and Analysis I and supervised around 80 studens within the three lecture series. Additionally I supervised two student helpers during my PhD and teached them how to use straditize. I am aiming for increasing my teaching experience in the future.
 - name: Data Analysis
   percentage: 70
+  seealso:
+      - Visualization
+      - Coding
+      - Statistics
+  desc: |
+    The analysis of big chunks of environmental data is one of my key scientific interests. I need this skill for identifying patterns in the data in order to use them in computational models. For this, I am working with large amounts of climate model output and transient model runs for thousands of years, as well as heterogeneous site-based data, such as pollen samples. My tools for this involve <a href="javascript:switch2desc('Statistics')">statistics</a> always combined with <a href="javascript:switch2desc('Visualization')">visualizations</a> of my data and the intermediate results to analyse and discuss my results with my colleagues.
 - name: Visualization
   percentage: 70
+  seealso:
+      - Data Analysis
+      - Python
+      - Javascript
+  desc: |
+    Visualization is one of my key tools for analysing data and developing new models. For this, I am mainly relying on the <a href="https://matplotlib.org/" target="_blank">matplotlib<a> package, <b>the</b> visualization library for python. I developed an own high-level interface to this package, namely <a href="https://psyplot.readthedocs.io" target="_blank">psyplot</a>. This library makes the work with matplotlib more interactive and useful for my daily work. For sharing my work with colleagues, I am also using <a href="https://bokeh.pydata.org/en/latest/" target="_blank">Bokeh</a> and javascripts <a href="https://d3js.org/" target="_blank">D3</a> library.
 - name: Coding
   percentage: 100
+  seealso:
+      - Open Source Software development
+      - Conceptualization
+  desc: |
+    The analysis, debugging and development of software code is one of my key tasks in research and I follow high standards for documentation and tests. I generally follow the <i>do not repeat yourself</i> principle and avoid copy-pasting as much as I can. As such, my code is always modular, reusable and easier to maintain.
+
+    Additionally, I am very efficient in digging into Python, FORTRAN and C source code, whether it is my own or from someone else, in order to identify and extract the core functionality. I often use this skill to understand the functionality of other open source projects and evaluate their performance and trustworthiness.
 - name: Statistics
   percentage: 80
+  seealso:
+      - Data Analysis
+      - R
+  desc: |
+    Besides my <a href="javascript:switch2desc('Visualization')">visualization techniques</a> I am using, statistics to identify patterns in my data and extract the necessary informations. Here I use simple statistics such as weighted means, regressions, multiple linear regressions, etc., as well as more advanced statistics such as distribution fitting or rotated principal component analysis.
 - name: Conceptualization
   percentage: 50
+  seealso:
+      - Open Source Software development
+      - Python
+  desc: |
+    I developed several new software packages for visualization, data analysis or modelling, which requires a lot of conceptualization to figure out the best framework. Here I follow the <i>do not repeat yourself</i> principle and use an object-oriented modular approach. For <a href="https://psyplot.readthedocs.io/en/latest/plugins.html", target="_blank">psyplot</a>, for example, I distributed the package into multiple plugins. It's graphical user interface is also extendable which, for example, did allow me to build <a href="https://straditize.readthedocs.io", target="_blank">straditize</a> on top of it.
+
+    Nevertheless, so far I never developed a concept for a new software in collaboration with others.

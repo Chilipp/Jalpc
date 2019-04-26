@@ -17,13 +17,18 @@
     "des": "Research Software Engineer für Klimawissenschaften"
   },
   "skills":{
-    "my_skills": "Meine Kenntnisse"
+    "my_skills": "Meine Kenntnisse",
+    "info": "Klicke auf die Beschriftungen im Diagramm für mehr Informationen, oder öffne den Tab für <i>Ausführliche Beschreibungen</i>.",
+    "general": "Allgemeine Kenntnisse",
+    "coding": "Programmiersprachen",
+    "diagram": "Diagramm",
+    "desc": "Ausführliche Beschreibungen"
   },
   "projects":{
     "my_projects": "Meine Projekte",
 
     "hornet": "Klimarekonstruktionen der Nördlichen Hemisphäre während des Holozäns",
-    "hornet_desc": "Eine zentrale Frage dieses vom Schweizer Nationalfond (SNF) finanzierten Projektes ist der Beitrag von Winter und Sommer zur interglazialen Warmperiode auf der nördlichen Hemisphäre. Ein besonderer Fokus liegt dabei auf der Rolle der orbital-bedingten gestiegenen Sonneneinstrahlung und auf dem Atmosphärendynamik-bedingten Anstieg des polwärts gewandten Wärmeflusses im Winter. Wir untersuchen die Rolle der atmosphärischen Dynamik indem wir sie mit vergleichbaren Mustern regionaler Klimaanomalien vergleichen. Dabei erstellen wir qualitativ hochwertige gerasterte saisonale Rekonstruktionen des Klimawandels auf der Nördlichen Hemisphäre während des Holozäns. Diese Daten können zur Evaluation von Klimamodellen herangezogen werden, insbesondere im Hinblick auf deren Fähigkeit regionalen Klimawandel zu generieren. Letzteres ist bis heute eine der zentralen Ungewissheiten im Bezug auf den zukünftigen Klimawandel.",
+    "hornet_desc": "Dies ist das zentrale Projekt der <i>Davis Gruppe</i>. Mein Beitrag zu diesem Projekt ist die Entwicklung neuer Methoden zur Rekonstruktion des Klimas basierend auf hundertausenden Pollenproben. Außerdem nutze ich die enstandende Rekonstruktion für weitergehende Analysen, wie zum Beispiel die Entwicklung atmosphärischer Stukturen der oberen Atmosphäre, z.B. der Nordatlantische Oszillation. Eine weitere Aufgabe ist die Entwicklung eines Internetportals über das wir unsere Datenbank mit dem Rest der Welt teilen können.",
 
     "psyplot": "Python software zur interaktiven Datenvisualisierung",
     "psyplot_desc": "psyplot ist ein plattformübergreifendes Open Source Python Projekt das hauptsächlich die Visualisierungsfunktionen von matplotlib mit den Datenmanagementfunktionen des xarray Pakets vereint. Die entstehende Software kann dabei sowohl von der Kommandozeile, als auch durch eine Graphische Benutzeroberfläche bedient werden. <br> Der Hauptzweck dieses Projektes ist es, eine Umgebung zu schaffen, die eine schnelle, attraktive, flexible, einfach anzuwendende, einfach zu reproduzierende und ganz besonders eine interaktive Visualisierung und Analyse von Klimamodelldaten ermöglicht. <br> Durch verschiedene Zusatzprogramme visualisiert psyplot georeferenzierte Klimamodelldaten auf rechteckförmigen und unstrukturierten Gittern. Außerdem können Regressionskurven, sowie stratigraphische Diagramme erstellt werden, und mehr. <br> Anwendungsbeispiele gibt es auf <a href=https://psyplot.readthedocs.io/en/latest/#examples>psyplot.readthedocs.io</a>.",
@@ -59,17 +64,17 @@
     "PhD_date": "Dez. 2015",
     "PhD_job": "Doktorant",
     "MSc": "Max-Planck-Institut für Meteorology/Universität Hamburg",
-    "MSc_desc": "Master in ganzheitlichen Klimawissenschaften",
+    "MSc_desc": "Eine ganzheitliche Modelanalyse politischer Szenarion über Biokraftstoffe und deren Einfluss auf die globale Hydrologie",
     "MSc_date": "Sep. 2013",
-    "MSc_job": "Master Student",
+    "MSc_job": "Master in ganzheitlichen Klimawissenschaften",
     "GP": "Greenpeace Germany e.V.",
     "GP_desc": "Biodiversitäts- und Klimateam",
     "GP_date": "Sep. 2012",
     "GP_job": "Praktikant",
     "BSc": "Universität Heidelberg",
-    "BSc_desc": "Bachelor in Physik",
+    "BSc_desc": "Optimierung eines Langpfad-NahIR-DOAS-Aufbaus zur Messung von Wasser, Kohlenstodioxid und Methan in der unteren Troposphäre",
     "BSc_date": "Sep. 2009",
-    "BSc_job": "Bachelor Student"
+    "BSc_job": "Bachelor in Physik"
   },
   "bibliography":{
     "my_bib": "Publikationen",

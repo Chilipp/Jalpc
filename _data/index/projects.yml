@@ -21,10 +21,23 @@
     baseline for climate model evaluation, and particularly to evaluate the
     ability of models to reproduce regional climate change, which remains a key
     uncertainty in simulations of future climate change.
+  skills:
+    - Data Analysis
+    - Visualization
+    - Coding
+    - Statistics
+    - Conceptualization
+    - Python
+    - MATLAB
+    - R
+    - Postgres
+    - Bash
+    - Javascript
 
 - name: psyplot
   i18n: psyplot
   gh_user: Chilipp
+  url: https://psyplot.readthedocs.io
   repo: psyplot
   img: /static/assets/img/landing/psyplot.png
   desc: Python framework for interactive data visualization
@@ -32,7 +45,7 @@
     psyplot is a cross-platform open source python project that mainly
     combines the plotting utilities of matplotlib and the data
     management of the xarray package and integrates them into a
-    software that can be used via command-line and via a GUI.
+    software that can be used via command-line and via a GUI. It forms the basis for many of my data analysis tasks.
     <br>
     The main purpose is to have a framework that allows a fast, attractive,
     flexible, easily applicable, easily reproducible and especially an interactive
@@ -40,9 +53,22 @@
     <br>
     Through various plugins psyplot visualizes georeferenced climate model data
     on rectangular and unstructured grids, regressions, stratigraphic diagrams
-    and more.
-    <br>
+    and more. The plugins are:
+    <ul>
+    <li><a href="https://psyplot.readthedocs.io/projects/psy-simple">psy-simple</a> for simple visualizations</li>
+    <li><a href="https://psyplot.readthedocs.io/projects/psy-maps">psy-maps</a> for visualizations of georeferenced data</li>
+    <li><a href="https://psyplot.readthedocs.io/projects/psy-reg">psy-reg</a> for the visualization of statistical fits</li>
+    <li><a href="https://psyplot.readthedocs.io/projects/psyplot-gui">psyplot-gui</a> for a graphical user interface</li>
+    <li><a href="https://psy-strat.readthedocs.io">psy-strat</a> for the visualization of stratigraphic data, such as pollen diagrams</li>
+    </ul>
     Examples are available at <a href=https://psyplot.readthedocs.io/en/latest/#examples>psyplot.readthedocs.io</a>.
+  skills:
+    - Github
+    - Open Source Software development
+    - Visualization
+    - Coding
+    - Conceptualization
+    - Python
 
 - name: straditize
   i18n: straditize
@@ -58,9 +84,27 @@
     depth/time series.
     <br>
     More at <a href=https://straditize.readthedocs.io>straditize.readthedocs.io</a>.
+  skills:
+    - Github
+    - Open Source Software development
+    - Visualization
+    - Coding
+    - Conceptualization
+    - Python
+    - Teaching
 
 - name: EMPD
   i18n: empd
-  url: https://wp.unil.ch/davisgroup/research/
+  url: https://EMPD2.github.io
   img: /static/assets/img/landing/epdlogo.png
   desc: The Eurasian Modern Pollen Database
+  skills:
+    - Github
+    - Open Source Software development
+    - Data Analysis
+    - Visualization
+    - Coding
+    - Conceptualization
+    - Python
+    - Postgres
+    - Javascript
