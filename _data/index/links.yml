@@ -1,22 +1,8 @@
 # links section data
-- last_name: Davis
-  first_name: Basil A. S.
-  desc: Supervisor
-  website: https://wp.unil.ch/davisgroup/basil-davis/
-  email: basil.davis@unil.ch
+- last_name: HCDC
+  desc: Helmholtz Coastal Data Center
+  website: https://hzg.de/institutes_platforms/coastal_research/main_projects/hcdc/index.php.de
 
-- last_name: Chevalier
-  first_name: Manuel
-  desc: Team member
-  website: https://chevaliermanuel.wixsite.com/webpage
-  email: manuel.chevalier@unil.ch
-
-- last_name: Davis Group
-  first_name:
-  desc: Laboratory
-  website: https://wp.unil.ch/davisgroup/
-
-- last_name: IDYST
-  first_name:
-  desc: Institute of Earth Surface Dynamics
-  website: https://www.unil.ch/idyst/home.html
+- last_name: HZG
+  desc: Institute für Küstenforschung
+  website: https://hzg.de/institutes_platforms/coastal_research

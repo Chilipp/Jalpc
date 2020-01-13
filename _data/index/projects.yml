@@ -1,6 +1,28 @@
 # projects section data
 # If you don't have language feature(language.yml is empty), ignore "i18n" items
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
+- name: HCDC
+  i18n: hcdc
+  url: https://hzg.de/institutes_platforms/coastal_research/main_projects/hcdc/index.php.de
+  img: /static/assets/img/landing/hcdc.svg
+  desc: Helmholtz Coastal Data Center
+  long_desc: |
+    The Helmholtz Coastal Data Center (HCDC) is the central point of contact
+    for scientific data management at the Institute of Coastal Research. The
+    new central working group possesses broad expertise and consists of
+    geoscientists, programmers and web developers as well as database and
+    metadata managers. One aim of the unit is to merge data from coastal and
+    marine research with the help of a central data portal and to provide
+    sustainable access to different user groups. HCDC therefore equally
+    addresses the scientific field, the interested public and decision makers
+    who manage coastal regions and the marine environment.
+  skills:
+    - Coding
+    - Conceptualization
+    - Python
+    - Bash
+    - Javascript
+
 - name: HORNET
   i18n: hornet
   url: http://p3.snf.ch/project-169598

@@ -27,6 +27,9 @@
   "projects":{
     "my_projects": "Meine Projekte",
 
+    "hcdc": "Helmholtz Coastal Data Center",
+    "hcdc_desc": "Das Helmholtz Coastal Data Center (HCDC) ist die zentrale Anlaufstelle für wissenschaftliches Datenmanagement am Institut für Küstenforschung. Die neue zentrale Arbeitsgruppe verfügt über eine breite Expertise und setzt sich aus Geowissenschaftlern, Programmierern, Webentwicklern sowie Datenbank- und Metadatenmanagern zusammen. Ein Ziel dieser Einheit ist es, Daten der Küsten- und Meeresforschung mit Hilfe eines zentralen Datenportals zusammenzuführen und unterschiedlichen Nutzerkreisen nachhaltig nutzbar zu machen. HCDC spricht daher gleichermaßen die Wissenschaft, die interessierte Öffentlichkeit und Entscheidungsträger für das Management von Küstenregionen und der marinen Umwelt an.",
+
     "hornet": "Klimarekonstruktionen der Nördlichen Hemisphäre während des Holozäns",
     "hornet_desc": "Dies ist das zentrale Projekt der <i>Davis Gruppe</i>. Mein Beitrag zu diesem Projekt ist die Entwicklung neuer Methoden zur Rekonstruktion des Klimas basierend auf hundertausenden Pollenproben. Außerdem nutze ich die enstandende Rekonstruktion für weitergehende Analysen, wie zum Beispiel die Entwicklung atmosphärischer Stukturen der oberen Atmosphäre, z.B. der Nordatlantische Oszillation. Eine weitere Aufgabe ist die Entwicklung eines Internetportals über das wir unsere Datenbank mit dem Rest der Welt teilen können.",
 
