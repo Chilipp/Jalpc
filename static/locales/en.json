@@ -58,6 +58,10 @@
   "career":{
     "description": "During my Bachelor I realized that I really want to do research on how our world is evolving. This wish was even stronger than my joy about the beauty of maths in physics. I have strong theoretical skills so I started coding and to develop climate models. This is now the way to go for me and since then I rejoice in data analysis and visualization. We can extract so much new knowledge out of these large data sets through visual and statistical exploration. Hence I am always keen to learn and develop new techniques and to share them with others.",
     "my_career": "My Career",
+    "HZG": "Helmholtz-Zentrum Geesthacht (HZG), Institute of Coastal Research",
+    "HZG_desc": "Helmholtz Coastal Data Center (HCDC)",
+    "HZG_date": "Dec. 2019",
+    "HZG_job": "Data Scientist",
     "PhD": "University of Lausanne, Institute of Earth Surface Dynamics (IDYST)",
     "PhD_desc": "Numerical Tools and Software Solutions for Palaeoclimate Analysis",
     "PhD_date": "Dec. 2015",

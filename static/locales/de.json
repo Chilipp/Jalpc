@@ -59,6 +59,10 @@
   "career":{
     "description": "Während meines Bachelorstudiums entschied ich, meine Forschung mehr auf die Entwicklung unseres Planeten zu fokusieren. Trotz meiner Leidenschaft für die Mathematik in der physikalischen Grundlagenforschung. Wegen meiner theoretischen Neigungen fing ich an zu programmieren und beschäftigte mich mit der Entwicklung von Klimamodellen. Besonders interessiert mich dabei die Analyse großer Datenmengen und deren Visualisierung. Ich finde es immer wieder erstaunlich wie viel neues Wissen wir durch visuelle und statistische Auswertungen generieren können. Deshalb freue ich mich immer, neue Methoden zu erlernen, zu entwickeln und sie mit anderen zu teilen.",
     "my_career": "Meine Karriere",
+    "HZG": "Helmholtz-Zentrum Geesthacht (HZG), Institut für Küstenforschung",
+    "HZG_desc": "Helmholtz Coastal Data Center (HCDC)",
+    "HZG_date": "Dez. 2019",
+    "HZG_job": "Data Scientist",
     "PhD": "Universität Lausanne, Institut für Erdoberflächen-Dynamik (IDYST)",
     "PhD_desc": "Numerische und Software Lösungen für paleoklimatische Analysen",
     "PhD_date": "Dez. 2015",
@@ -72,7 +76,7 @@
     "GP_date": "Sep. 2012",
     "GP_job": "Praktikant",
     "BSc": "Universität Heidelberg",
-    "BSc_desc": "Optimierung eines Langpfad-NahIR-DOAS-Aufbaus zur Messung von Wasser, Kohlenstodioxid und Methan in der unteren Troposphäre",
+    "BSc_desc": "Optimierung eines Langpfad-NahIR-DOAS-Aufbaus zur Messung von Wasser, Kohlenstoffdioxid und Methan in der unteren Troposphäre",
     "BSc_date": "Sep. 2009",
     "BSc_job": "Bachelor in Physik"
   },
