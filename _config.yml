@@ -24,18 +24,19 @@ author:  # change following line to your infomation.
   orcid: "0000-0001-6171-7716"
   email: philipp.sommer@hzg.de  # Leave blank if you don't have now
   cv:   # An online CV can be printed as PDF, leave blank if you don't have now
-  address_link: https://www.unil.ch/idyst/home/menuinst/people/official-team-table.html?url_params=-v_faculte=90-v_unite=273-v_personne=1178570-mode=fiche&pubsIdParam=dff574887da14a49a77476bc7cbddd13
+  address_link: https://hzg.de/institutes_platforms/coastal_research/system_analysis/regional_atmospheric_mod/staff/083740/index.php.de
   address: |
-    Faculté des géosciences et de l'environnement<br><br>
+    Helmholtz Zentrum Geesthacht<br><br>
 
-    Institut des dynamiques de la surface terrestre<br>
-    Position(s): Doctorant FNS<br><br>
+    Institut für Küstenforschung<br>
+    Helmholtz Coastal Data Center<br>
+    Position(s): Data Scientist<br><br>
 
-    IDYST<br>
-    Quartier UNIL-Mouline<br>
-    Bâtiment Géopolis 4413<br>
-    CH - 1015 Lausanne<br>
-    Phone: +41 21 692 35 40<br>
+    Helmholtz-Zentrum Geesthacht<br>
+    Zentrum für Material- und Küstenforschung<br>
+    Max-Planck-Straße 1<br>
+    DE - 21502 Geesthacht<br>
+    Phone: +49 (0) 4152 87-2126<br>
   # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
   skill_icon1:
     - name: fa-github
