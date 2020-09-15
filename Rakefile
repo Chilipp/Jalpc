@@ -5,6 +5,7 @@ task default: %w[test]
 task :test do
   sh "bundle exec jekyll build"
   options = { :assume_extension => true,
+              url_ignore: [/www.researchgate.net/],
               :typhoeus => {
                   :ssl_verifypeer => false,
                   :ssl_verifyhost => 0}
