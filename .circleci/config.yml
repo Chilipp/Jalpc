@@ -14,6 +14,7 @@ workflows:
             - test-site
           type: approval
       - deploy-site:
+          context: website-deploy
           requires:
             - hold-for-deploy
           filters:
