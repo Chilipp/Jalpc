@@ -19,7 +19,7 @@ workflows:
             - hold-for-deploy
           filters:
             branches:
-              only: circle
+              only: master
 
 build_jekyll: &build_jekyll
   name: Jekyll Build
