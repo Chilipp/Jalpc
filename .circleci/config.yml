@@ -91,6 +91,7 @@ jobs:
           at: _site
       - run: |
           git mv _site/* .
+          git init .
           git add .
           git commit -m "Add files"
           git remote add page https://www.philipp-s-sommer.de/_git/page
