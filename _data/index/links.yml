@@ -1,8 +1,8 @@
 # links section data
 - last_name: HCDC
   desc: Helmholtz Coastal Data Center
-  website: https://hcdc.hzg.de
+  website: https://hcdc.hereon.de
 
-- last_name: HZG
-  desc: Institute für Küstenforschung
-  website: https://hzg.de/institutes_platforms/coastal_research
+- last_name: Hereon
+  desc: Institute of Coastal Systems - Analysis and Modeling
+  website: https://www.hereon.de/institutes/coastal_systems_analysis_modeling/index.php.en
