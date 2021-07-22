@@ -3,7 +3,7 @@
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
 - name: HCDC
   i18n: hcdc
-  url: https://hcdc.hzg.de
+  url: https://hcdc.hereon.de
   img: /static/assets/img/landing/hcdc.svg
   desc: Helmholtz Coastal Data Center
   long_desc: |

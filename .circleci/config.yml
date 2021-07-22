@@ -1,0 +1,114 @@
+version: 2.1
+
+workflows:
+  version: 2
+
+  # The build workflow will build a preview for the site, intended for PRs
+  build:
+    jobs:
+      - build-site
+      - test-site
+      - hold-for-deploy:
+          requires:
+            - build-site
+            - test-site
+          type: approval
+          filters:
+            branches:
+              only: master
+      - deploy-site:
+          context: website-deploy
+          requires:
+            - hold-for-deploy
+          filters:
+            branches:
+              only: master
+
+build_jekyll: &build_jekyll
+  name: Jekyll Build
+  command: |
+      echo "Building Website for Preview"
+      cd ~/repo
+
+      # Update baseurl in config
+      URL=https://${CIRCLE_BUILD_NUM}-267395254-gh.circle-artifacts.com
+      echo "baseurl: /0/preview" >> _config.yml
+      echo "url: $URL" >> _config.yml
+
+      # Build site to download template
+      bundle exec jekyll build
+
+test_jekyll: &test_jekyll
+  name: Test the build
+  command: |
+    echo "baseurl: ''" >> _config.yml
+    echo "url: ''" >> _config.yml
+
+    bundle exec rake
+
+deploy_jekyll: &deploy_jekyll
+  name: Build and deploy
+  command: |
+    bundle exec jekyll build
+    cd _site/
+    git init .
+    git config user.email "circleci@psyplot.org"
+    git config user.name "CircleCi Deployment"
+    git add .
+    git commit -m "Add files"
+    git remote add page https://www.philipp-s-sommer.de/_git/page
+    echo "machine www.philipp-s-sommer.de" > ~/.netrc
+    echo "  login ${DEPLOYUSER}" >> ~/.netrc
+    echo "  password ${DEPLOYPW}" >> ~/.netrc
+    git push --force page master
+    rm ~/.netrc
+
+executors:
+  jekyll-executor:
+    docker:
+      - image: circleci/ruby:2.4.1
+    working_directory: ~/repo
+    environment:
+      - JEKYLL_ENV: production
+      - NOKOGIRI_USE_SYSTEM_LIBRARIES: true
+      - BUNDLE_PATH: ~/repo/vendor/bundle
+
+commands:
+  install:
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies
+          - rubygems-v1
+      - run:
+          name: Bundle Install
+          command: |
+              cd ~/repo
+              bundle check || bundle install
+      - save_cache:
+          key: rubygems-v1
+          paths:
+            - vendor/bundle
+
+
+jobs:
+  build-site:
+    executor: jekyll-executor
+    steps:
+      - install
+      - run: *build_jekyll
+      - store_artifacts:
+          path: ~/repo/_site
+          destination: preview
+  test-site:
+    executor: jekyll-executor
+    steps:
+      - install
+      - run: *test_jekyll
+  deploy-site:
+    executor: jekyll-executor
+    steps:
+      - install
+      - run: *deploy_jekyll
+
