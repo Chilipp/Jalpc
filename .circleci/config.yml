@@ -78,6 +78,7 @@ jobs:
           destination: preview
       - persist_to_workspace:
           root: _site
+          paths: .
   test-site:
     executor: jekyll-executor
     steps:
