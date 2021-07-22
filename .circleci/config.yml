@@ -76,6 +76,8 @@ jobs:
       - store_artifacts:
           path: ~/repo/_site
           destination: preview
+      - persist_to_workspace:
+          root: _site
   test-site:
     executor: jekyll-executor
     steps:
@@ -84,11 +86,16 @@ jobs:
   deploy-site:
     executor: jekyll-executor
     steps:
+      - attach_workspace:
+          at: _site
       - run: |
+          git mv _site/* .
+          git add .
+          git commit -m "Add files"
           git remote add page https://www.philipp-s-sommer.de/_git/page
           echo "machine www.philipp-s-sommer.de" > ~/.netrc
           echo "  login ${DEPLOYUSER}" >> ~/.netrc
           echo "  password ${DEPLOYPW}" >> ~/.netrc
-          git push page master
+          git push --force page master
           rm ~/.netrc
 
