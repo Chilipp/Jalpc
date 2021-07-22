@@ -60,7 +60,7 @@
 
 - name: psyplot
   i18n: psyplot
-  gh_user: Chilipp
+  gh_user: psyplot
   url: https://psyplot.readthedocs.io
   repo: psyplot
   img: /static/assets/img/landing/psyplot.png
