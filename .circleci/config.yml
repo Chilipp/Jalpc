@@ -98,6 +98,8 @@ jobs:
           echo "machine www.philipp-s-sommer.de" > ~/.netrc
           echo "  login ${DEPLOYUSER}" >> ~/.netrc
           echo "  password ${DEPLOYPW}" >> ~/.netrc
+          git config --global user.email "circle@psyplot.org"
+          git config --global user.name "CircleCi Deployment"
           git push --force page master
           rm ~/.netrc
 
