@@ -12,6 +12,7 @@ workflows:
           requires:
             - build-site
             - test-site
+          type: approval
           filters:
             branches:
               only: circle
@@ -37,6 +38,23 @@ test_jekyll: &test_jekyll
     echo "url: ''" >> _config.yml
 
     bundle exec rake
+
+deploy_jekyll: &deploy_jekyll
+  name: Build and deploy
+  command: |
+    bundle exec jekyll build
+    cd _site/
+    git init .
+    git config user.email "circleci@psyplot.org"
+    git config user.name "CircleCi Deployment"
+    git add .
+    git commit -m "Add files"
+    git remote add page https://www.philipp-s-sommer.de/_git/page
+    echo "machine www.philipp-s-sommer.de" > ~/.netrc
+    echo "  login ${DEPLOYUSER}" >> ~/.netrc
+    echo "  password ${DEPLOYPW}" >> ~/.netrc
+    git push --force page master
+    rm ~/.netrc
 
 executors:
   jekyll-executor:
@@ -76,9 +94,6 @@ jobs:
       - store_artifacts:
           path: ~/repo/_site
           destination: preview
-      - persist_to_workspace:
-          root: _site
-          paths: .
   test-site:
     executor: jekyll-executor
     steps:
@@ -87,19 +102,6 @@ jobs:
   deploy-site:
     executor: jekyll-executor
     steps:
-      - attach_workspace:
-          at: _site
-      - run: |
-          cd _site/
-          git init .
-          git config user.email "circleci@psyplot.org"
-          git config user.name "CircleCi Deployment"
-          git add .
-          git commit -m "Add files"
-          git remote add page https://www.philipp-s-sommer.de/_git/page
-          echo "machine www.philipp-s-sommer.de" > ~/.netrc
-          echo "  login ${DEPLOYUSER}" >> ~/.netrc
-          echo "  password ${DEPLOYPW}" >> ~/.netrc
-          git push --force page master
-          rm ~/.netrc
+      - install
+      - run: *deploy_jekyll
 
