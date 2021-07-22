@@ -13,6 +13,9 @@ workflows:
             - build-site
             - test-site
           type: approval
+          filters:
+            branches:
+              only: master
       - deploy-site:
           context: website-deploy
           requires:
