@@ -8,11 +8,14 @@ workflows:
     jobs:
       - build-site
       - test-site
-      - deploy-site:
+      - hold-for-deploy:
           requires:
             - build-site
             - test-site
           type: approval
+      - deploy-site:
+          requires:
+            - hold-for-deploy
           filters:
             branches:
               only: circle
