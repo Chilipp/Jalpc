@@ -6,15 +6,15 @@ workflows:
   # The build workflow will build a preview for the site, intended for PRs
   build:
     jobs:
-      - build-site:
+      - build-site
+      - test-site
+      - deploy-site:
+          requires:
+            - build-site
+            - test-site
           filters:
             branches:
-              ignore: gh-pages
-      - test-site:
-          filters:
-            branches:
-              ignore: gh-pages
-
+              only: circle
 
 build_jekyll: &build_jekyll
   name: Jekyll Build
@@ -81,3 +81,14 @@ jobs:
     steps:
       - install
       - run: *test_jekyll
+  deploy-site:
+    executor: jekyll-executor
+    steps:
+      - run: |
+          git remote add page https://www.philipp-s-sommer.de/_git/page
+          echo "machine www.philipp-s-sommer.de" > ~/.netrc
+          echo "  login ${DEPLOYUSER}" >> ~/.netrc
+          echo "  password ${DEPLOYPW}" >> ~/.netrc
+          git push page master
+          rm ~/.netrc
+
