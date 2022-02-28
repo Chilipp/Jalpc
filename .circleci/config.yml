@@ -16,13 +16,16 @@ workflows:
           filters:
             branches:
               only: master
-      - deploy-site:
-          context: website-deploy
+      - build-for-deploy:
           requires:
             - hold-for-deploy
           filters:
             branches:
               only: master
+      - deploy-site:
+          context: website-deploy
+          requires:
+            - build-for-deploy
 
 build_jekyll: &build_jekyll
   name: Jekyll Build
@@ -108,6 +111,18 @@ jobs:
     steps:
       - install
       - run: *test_jekyll
+  build-for-deploy:
+    executor: jekyll-executor
+    steps:
+      - install
+      - run:
+          name: Jekyll Build
+          command: |
+            cd ~/repo
+            bundle exec jekyll build
+      - persist_to_workspace:
+          root: ~/repo
+          paths: _site
   deploy-site:
     machine:
       image: ubuntu-2004:202111-02
