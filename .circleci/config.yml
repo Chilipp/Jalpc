@@ -119,6 +119,7 @@ jobs:
           name: Jekyll Build
           command: |
             cd ~/repo
+            rm -r _site
             bundle exec jekyll build
       - persist_to_workspace:
           root: ~/repo
