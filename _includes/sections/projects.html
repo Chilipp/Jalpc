@@ -25,7 +25,11 @@
                     {% elsif project.url %}
                     <a title="{{ project.img_title }}" href="{{ project.url }}" target="_blank">
                     {% elsif project.repo %}
+                    {% if project.gh_user %}
                     <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank">
+                    {% elsif project.codebase_user %}
+                    <a href="https://codebase.helmholtz.cloud/{{ project.codebase_user }}/{{ project.repo }}" target="_blank">
+                    {% endif %}
                     {% endif %}
 
                     {% if project.img %}
@@ -38,7 +42,11 @@
                       {% if project.url %}
                       <a href="{{ project.url }}" target="_blank"><span class="navy">{{ project.name }}</span></a>
                       {% elsif project.repo %}
+                      {% if project.gh_user %}
                       <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank"><span class="navy">{{ project.name }}</span></a>
+                      {% elsif project.codebase_user %}
+                      <a href="https://codebase.helmholtz.cloud/{{ project.codebase_user }}/{{ project.repo }}" target="_blank"><span class="navy">{{ project.name }}</span></a>
+                      {% endif %}
                       {% else %}
                       <span class="navy">{{ project.name }}</span>
                       {% endif %}
@@ -118,7 +126,11 @@
                           {% if project.url %}
                           <a href="{{ project.url }}" target="_blank"><span class="navy">{{ project.name }}</span></a>
                           {% elsif project.repo %}
+                          {% if project.gh_user %}
                           <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank"><span class="navy">{{ project.name }}</span></a>
+                          {% elsif project.codebase_user %}
+                          <a href="https://codebase.helmholtz.cloud/{{ project.codebase_user }}/{{ project.repo }}" target="_blank"><span class="navy">{{ project.name }}</span></a>
+                          {% endif %}
                           {% else %}
                           <span class="navy">{{ project.name }}</span>
                           {% endif %}
