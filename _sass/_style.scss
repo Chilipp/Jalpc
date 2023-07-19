@@ -2848,6 +2848,7 @@ details.project_summary {
     .project-desc {
         color: #aeaeae;
     }
+    cursor: pointer;
 }
 
 details.bib_abstract {
@@ -2861,6 +2862,7 @@ details.bib_abstract summary {
 
 details.bib_abstract summary:hover {
     color: #aeaeae;
+    cursor: pointer;
 }
 
 .accordion {
