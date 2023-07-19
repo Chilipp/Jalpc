@@ -144,7 +144,7 @@
   gh_user: Chilipp
   repo: sphinx-nbexamples
   img: https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg
-  img_title: Cameron Oelsen [BSD (https://opensource.org/license/bsd-3-clause/)], via Wikimedia Commons
+  img_title: Cameron Oelsen [BSD (https://spdx.org/licenses/BSD-3-Clause.html)], via Wikimedia Commons
   desc: Include Jupyter notebooks in a sphinx documentation
   long_desc: |
     This python package creates an example gallery for documentations generated
