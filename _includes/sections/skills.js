@@ -147,7 +147,11 @@ function switch2desc(skill) {
                 {% elsif project.url %}
                 <a title="{{ project.img_title }}" href="{{ project.url }}" target="_blank">
                 {% elsif project.repo %}
-                <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank">
+                {% if project.gh_user %}
+                    <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank">
+                {% elsif project.codebase_user %}
+                    <a href="https://codebase.helmholtz.cloud/{{ project.codebase_user }}/{{ project.repo }}" target="_blank">
+                {% endif %}
                 {% endif %}
                 {{ project.name }}
                 {% if project.img_link or project.url or project.repo %}</a> {% endif %}
@@ -192,7 +196,11 @@ function switch2desc(skill) {
                 {% elsif project.url %}
                 <a title="{{ project.img_title }}" href="{{ project.url }}" target="_blank">
                 {% elsif project.repo %}
-                <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank">
+                {% if project.gh_user %}
+                    <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank">
+                {% elsif project.codebase_user %}
+                    <a href="https://codebase.helmholtz.cloud/{{ project.codebase_user }}/{{ project.repo }}" target="_blank">
+                {% endif %}
                 {% endif %}
                 {{ project.name }}
                 {% if project.img_link or project.url or project.repo %}</a> {% endif %}

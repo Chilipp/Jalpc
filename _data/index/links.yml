@@ -6,3 +6,11 @@
 - last_name: Hereon
   desc: Helmholtz-Zentrum Hereon
   website: https://www.hereon.de
+
+- last_name: GitHub
+  desc: My Profile on GitHub
+  website: https://github.com/Chilipp
+
+- last_name: Codebase
+  desc: My Profile in the Helmholtz Gitlab
+  website: https://codebase.helmholtz.cloud/philipp.sommer

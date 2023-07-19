@@ -62,7 +62,7 @@
                               </ul>
                           </div>
                       </details>
-                      {% if project.repo %}
+                      {% if project.repo and project.gh_user %}
                       <div user="{{ project.gh_user }}" repo="{{ project.repo }}" class="ghbtn">
                           <a target="_blank" style="width: 65px;" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/stargazers" class="btn btn-white btn-xs star"><i class="fas fa-star"></i> ...</a>&emsp;&emsp;
                           <a target="_blank" style="width: 65px;" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/network" class="btn btn-white btn-xs fork"><i class="fas fa-code-fork"></i> ...</a>
@@ -80,7 +80,7 @@
         <div class="col-lg-12 text-center">
             <div class="navy-line"></div>
 
-            <button class="accordion"><h2><span data-i18n="projects.my_side_projects">Side Projects</span></h2></button>
+            <button class="accordion"><h2><span data-i18n="projects.my_side_projects">Side and Past Projects</span></h2></button>
             <div class="panel">
             {% for project in site.data.index.side_projects %}
                 {% assign loopindex = forloop.index | modulo: 2 %}
@@ -100,7 +100,12 @@
                           {% elsif project.url %}
                           <a title="{{ project.img_title }}" href="{{ project.url }}">
                           {% elsif project.repo %}
+                          {% if project.gh_user }
                           <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank">
+                          {% elif project.codebase_user %}
+                          <a href="https://codebase.helmholtz.cloud/{{ project.codebase_user }}/{{ project.repo }}" target="_blank">
+                          {% endif %}
+                          </a>
                           {% endif %}
 
                           {% if project.img %}
@@ -137,7 +142,7 @@
                                   </ul>
                               </div>
                           </details>
-                          {% if project.repo %}
+                          {% if project.repo and project.gh_user %}
                           <div user="{{ project.gh_user }}" repo="{{ project.repo }}" class="ghbtn">
                               <a target="_blank" style="width: 65px;" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/stargazers" class="btn btn-white btn-xs star"><i class="fas fa-star"></i> ...</a>&emsp;&emsp;
                               <a target="_blank" style="width: 65px;" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/network" class="btn btn-white btn-xs fork"><i class="fas fa-code-fork"></i> ...</a>
