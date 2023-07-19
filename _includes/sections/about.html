@@ -26,6 +26,9 @@
                     {% if site.author.github_username %}
                     <li><a title="Github user {{ site.author.github_username }}" href="https://github.com/{{ site.author.github_username }}" target="blank"><i class="fab fa-github"></i></a></li>
                     {% endif %}
+                    {% if site.author.helmholtz_codebase_username %}
+                    <li><a title="Helmholtz Codebase Gitlab User {{ site.author.helmholtz_codebase_username }}" href="https://codebase.helmholtz.cloud/{{ site.author.helmholtz_codebase_username }}" target="blank"><i class="fab fa-gitlab"></i></a></li>
+                    {% endif %}
                     {% if site.author.linkedin_id %}
                     <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin_id }}" target="blank"><i class="fab fa-linkedin"></i></a></li>
                     {% endif %}
