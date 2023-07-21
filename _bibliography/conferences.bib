@@ -130,11 +130,12 @@ The HORNET database can be interfaced through a newly developed, simple, freely 
   url       = {https://app.oxfordabstracts.com/events/574/program-app/submission/94623},
 }
 
-@Article{Sommer2020,
+@InProceedings{Sommer2020,
   author    = {Philipp S. Sommer and Ronny Petrik and Beate Geyer and Ulrike Kleeberg and Dietmar Sauer and Linda Baldewein and Robin Luckey and Lars Möller and Housam Dibeh and Christopher Kadow},
   title     = {Integrating Model Evaluation and Observations into a Production-Release Pipeline},
   year      = {2020},
   month     = {mar},
+  publisher = {Copernicus {GmbH}},
   abstract  = {The complexity of Earth System and Regional Climate Models represents a considerable challenge for developers. Tuning but also improving one aspect of a model can unexpectedly decrease the performance of others and introduces hidden errors. Reasons are in particular the multitude of output parameters and the shortage of reliable and complete observational datasets. One possibility to overcome these issues is a rigorous and continuous scientific evaluation of the model. This requires standardized model output and, most notably, standardized observational datasets. Additionally, in order to reduce the extra burden for the single scientist, this evaluation has to be as close as possible to the standard workflow of the researcher, and it needs to be flexible enough to adapt it to new scientific questions.
 
 We present the Free Evaluation System Framework (Freva) implementation within the Helmholtz Coastal Data Center (HCDC) at the Institute of Coastal Research in the Helmholtz-Zentrum Geesthacht (HZG). Various plugins into the Freva software, namely the HZG-EvaSuite, use observational data to perform a standardized evaluation of the model simulation. We present a comprehensive data management infrastructure that copes with the heterogeneity of observations and simulations. This web framework comprises a FAIR and standardized database of both, large-scale and in-situ observations exported to a format suitable for data-model intercomparisons (particularly netCDF following the CF-conventions). Our pipeline links the raw data of the individual model simulations (i.e. the production of the results) to the finally published results (i.e. the released data). 
@@ -142,24 +143,24 @@ We present the Free Evaluation System Framework (Freva) implementation within th
 Another benefit of the Freva-based evaluation is the enhanced exchange between the different compartments of the institute, particularly between the model developers and the data collectors, as Freva contains built-in functionalities to share and discuss results with colleagues. We will furthermore use the tool to strengthen the active communication with the data and software managers of the institute to generate or adapt the evaluation plugins.},
   doi       = {10.5194/egusphere-egu2020-19298},
   pdf_file  = {https://presentations.copernicus.org/EGU2020/EGU2020-19298_presentation.ppsx},
-  publisher = {Copernicus {GmbH}},
 }
 
-@Article{Sommer2023,
+@InProceedings{Sommer2023,
   author    = {Philipp S. Sommer and Linda Baldewein and Hatef Takyar and Rehan Chaudhary and Mostafa Hadizadeh and Housam Dibeh and Max Böcke and Christof Lorenz and Tilman Dinter and Stefan Pinkernell and Klaus Getzlaff and Ulrike Kleeberg},
   title     = {{ESM} Data Exploration with the Model Data Explorer},
   year      = {2023},
   month     = {may},
+  publisher = {Copernicus {GmbH}},
   abstract  = {Making Earth-System-Model (ESM) Data accessible is challenging due to the large amount of data that we are facing in this realm. The upload is time-consuming, expensive, technically complex, and every institution has their own procedures. Non-ESM experts face a lot of problems and pure data portals are hardly usable for inter- and trans-disciplinary communication of ESM data and findings, as this level of accessibility often requires specialized web or computing services. With the Model Data Explorer, we want to simplify the generation of web services from ESM data, and we provide a framework that allows us to make the raw model data accessible to non-ESM experts. Our decentralized framework implements the possibility for an efficient remote processing of distributed ESM data. Users interface with an intuitive map-based front-end to compute spatial or temporal aggregations, or select regions to download the data. The data generators (i.e. the scientist with access to the raw data) use a light-weight and secure python library based on the Data Analytics Software Framework (DASF, https://digital-earth.pages.geomar.de/dasf/dasf-messaging-python) to create a back-end module. This back-end module runs close to the data, e.g. on the HPC-resource where the data is stored. Upon request, the module generates and provides the required data for the users in the web front-end. Our approach is intended for scientists and scientific usage! We aim for a framework where web-based communication of model-driven data science can be maintained by the scientific community. The Model Data Explorer ensures fair reward for the scientific work and adherence to the FAIR principles without too much overhead and loss in scientific accuracy. The Model Data Explorer is in the progress of development at the Helmholtz-Zentrum Hereon, together with multiple scientific and data management partners in other German research centers. The full list of contributors is constantly updated and can be accessed at https://model-data-explorer.readthedocs.io.},
   doi       = {10.5194/egusphere-egu23-3624},
   pdf_file  = {https://zenodo.org/record/7870281},
-  publisher = {Copernicus {GmbH}},
 }
 
-@Article{Sommer2023a,
+@InProceedings{Sommer2023a,
   author    = {Sommer, Philipp S. and Geyer, Beate and Steger, Christian and Söding, Emanuel and Pörsch, Andrea and Baldewein, Linda and Kleeberg, Ulrike},
   title     = {The DJango Academic Community Platform (DJAC): An open-source website for transparent discussion, collaboration and management in an academic community},
   year      = {2023},
+  publisher = {Zenodo},
   abstract  = {Collaboration Platforms for harmonization and building a shared understanding of communities are essential components in today's academic environment. With the help of modern software tools and advancing digitization, our communities can improve collaboration via event, project and file management, and communication. The variety of tasks and tools needed in interdisciplinary communities, however, pose a considerable obstacle for community members. We see them in the administration, and especially when on-boarding new members with different levels of experience (from student to senior scientist). Here, user-friendly, technical support is needed.
 
 We are involved in many communities, particularly in the Climate Limited-area Modelling Community (CLM-Community) and the Helmholtz Metadata Collaboration (HMC). With the input of these (and more) communities, we are currently working on the DJAC-Platform, an open-source, Python (Django)-based website. DJAC manages communities from a single institute to an (inter-)national community with hundreds and more participating research institutions. DJAC is available at codebase.helmholtz.cloud.},
@@ -167,7 +168,31 @@ We are involved in many communities, particularly in the Climate Limited-area Mo
   doi       = {10.5281/zenodo.7660330},
   keywords  = {django, Community, deRSE23, de-rse, Research Software Engineering},
   pdf_file  = {https://zenodo.org/record/7660330/files/Sommer-Philipp-The-DJango-Academic-Community-Platform-DJAC.pdf?download=1},
+}
+
+@InProceedings{Sommer2021,
+  author    = {Sommer, Philipp S. and Wichert, Viktoria and Eggert, Daniel and Dinter, Tilman and Getzlaff, Klaus and Lehmann, Andreas and Werner, Christian and Silva, Brenner and Schmidt, Lennart and Schäfer, Angela},
+  booktitle = {International Series of Online Research Software Events (SORSE)},
+  title     = {A new distributed data analysis framework for better scientific collaborations},
+  year      = {2021},
   publisher = {Zenodo},
+  abstract  = {A common challenge for projects with multiple involved research institutes is a well-defined and productive collaboration. All parties measure and analyze different aspects, depend on each other, share common methods, and exchange the latest results, findings, and data. Today this exchange is often impeded by a lack of ready access to shared computing and storage resources. In our talk, we present a new and innovative remote procedure call (RPC) framework. We focus on a distributed setup, where project partners do not necessarily work at the same institute, and do not have access to each others resources. We present an application programming interface (API) developed in Python that enables scientists to collaboratively explore and analyze sets of distributed data. It offers the functionality to request remote data through a comfortable interface, and to share and invoke single computational methods or even entire analytical workflows and their results. The prototype enables researchers to make their methods accessible as a backend module running on their own infrastructure. Hence researchers from other institutes may apply the available methods through a lightweight python or Javascript API. In the end, the overhead for both, the backend developer and the remote user, is very low. The effort of implementing the necessary workflow and API usage equalizes the writing of code in a non-distributed setup. Besides that, data do not have to be downloaded locally, the analysis can be executed "close to the data" while using the institutional infrastructure where the eligible data set is stored. With our prototype, we demonstrate distributed data access and analysis workflows across institutional borders to enable effective scientific collaboration. This framework has been developed in a joint effort of the DataHub and Digitial Earth initiatives within the Research Centers of the Helmholtz Association of German Research Centres, HGF.},
+  copyright = {Creative Commons Attribution 4.0 International},
+  doi       = {10.5281/zenodo.4575652},
+  pdf_file  = {https://zenodo.org/record/4575652},
+}
+
+@InProceedings{Sommer2021a,
+  author    = {Philipp S. Sommer},
+  title     = {Interactive visualization of climate model data via Python or {GUI} with psyplot},
+  year      = {2021},
+  month     = {dec},
+  publisher = {Copernicus {GmbH}},
+  abstract  = {psyplot (https://psyplot.github.io) is an open-source data visualization framework that integrates rich computational and mathematical software packages (such as xarray and matplotlib) into a flexible framework for visualization. It differs from most of the visual analytic software such that it focuses on extensibility in order to flexibly tackle the different types of analysis questions that arise in pioneering research. The design of the high-level API of the framework enables a simple and standardized usage from the command-line, python scripts or Jupyter notebooks. A modular plugin framework enables a flexible development of the framework that can potentially go into many different directions. The additional enhancement with a graphical user interface (GUI) makes it the only visualization framework that can be handled from the convenient command-line or scripts, as well as via point-click handling. It additionally allows to build further desktop applications on top of the existing framework.
+
+In this presentation, I will show the main functionalities of psyplot, with a special focus on the visualization of unstructured grids (such as the ICON model by the German Weather Service (DWD)), and the usage of psyplot on the HPC facilities of the DKRZ (mistral, jupyterhub, remote desktop, etc.). My demonstration will cover the basic structure of the psyplot framework and how to use psyplot in python scripts (and Jupyter notebooks). I will demonstrate a quick demo of to the psyplot GUI and psy-view, a ncview-like interface built upon psyplot, and talk about different features such as reusing plot configurations and exporting figures.},
+  doi       = {10.5194/dach2022-280},
+  pdf_file  = {https://github.com/Chilipp/psyplot-DACH2022-presentation},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
