@@ -43,15 +43,14 @@
       - Javascript
   desc: |
     Visualization is one of my key tools for analysing data and developing new models. For this, I am mainly relying on the <a href="https://matplotlib.org/" target="_blank">matplotlib<a> package, <b>the</b> visualization library for python. I developed an own high-level interface to this package, namely <a href="https://psyplot.github.io" target="_blank">psyplot</a>. This library makes the work with matplotlib more interactive and useful for my daily work. For sharing my work with colleagues, I am also using <a href="https://bokeh.pydata.org/en/latest/" target="_blank">Bokeh</a> and javascripts <a href="https://d3js.org/" target="_blank">D3</a> library.
-- name: Coding
-  percentage: 100
+- name: Web Development and Deployment
+  percentage: 90
   seealso:
-      - Open Source Software development
-      - Conceptualization
+    - Conceptualization
   desc: |
-    The analysis, debugging and development of software code is one of my key tasks in research and I follow high standards for documentation and tests. I generally follow the <i>do not repeat yourself</i> principle and avoid copy-pasting as much as I can. As such, my code is always modular, reusable and easier to maintain.
-
-    Additionally, I am very efficient in digging into Python, FORTRAN and C source code, whether it is my own or from someone else, in order to identify and extract the core functionality. I often use this skill to understand the functionality of other open source projects and evaluate their performance and trustworthiness.
+    In HCDC I am working a lot on the development and deployment of websites, both on virtual machines and especially via kubernetes.
+    I developed a methodology based on helm charts and software templates for a sustainable, secure, maintainable and yet flexible
+    deployment workflow for our openshift cluster at Hereon.
 - name: Statistics
   percentage: 80
   seealso:
@@ -68,11 +67,12 @@
     I developed several new software packages for visualization, data analysis or modelling, which requires a lot of conceptualization to figure out the best framework. Here I follow the <i>do not repeat yourself</i> principle and use an object-oriented modular approach. For <a href="https://psyplot.github.io/psyplot/plugins.html", target="_blank">psyplot</a>, for example, I distributed the package into multiple plugins. It's graphical user interface is also extendable which, for example, did allow me to build <a href="https://straditize.readthedocs.io", target="_blank">straditize</a> on top of it.
 
     Nevertheless, so far I never developed a concept for a new software in collaboration with others.
-- name: Web Development and Deployment
-  percentage: 90
+- name: Coding
+  percentage: 100
   seealso:
-    - Conceptualization
+      - Open Source Software development
+      - Conceptualization
   desc: |
-    In HCDC I am working a lot on the development and deployment of websites, both on virtual machines and especially via kubernetes.
-    I developed a methodology based on helm charts and software templates for a sustainable, secure, maintainable and yet flexible
-    deployment workflow for our openshift cluster at Hereon.
+    The analysis, debugging and development of software code is one of my key tasks in research and I follow high standards for documentation and tests. I generally follow the <i>do not repeat yourself</i> principle and avoid copy-pasting as much as I can. As such, my code is always modular, reusable and easier to maintain.
+
+    Additionally, I am very efficient in digging into Python, FORTRAN and C source code, whether it is my own or from someone else, in order to identify and extract the core functionality. I often use this skill to understand the functionality of other open source projects and evaluate their performance and trustworthiness.
