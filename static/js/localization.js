@@ -1,29 +1,34 @@
-$(document).ready(function() {
+
+window.addEventListener("load", function () {
   var i18nOpts = {
-    lng: 'en',
     getAsync: true,
     fallbackLng: 'en',
-    resGetPath: 'locales/__lng__.json'
+    backend: {
+      loadPath: 'locales/{{lng}}.json'
+    }
   };
 
   var translate = function() {
-    $('.i18container').i18n();
-    $('#i18_navbar').i18n();
-    $('#i18_about_me').i18n();
-    $('#i18_skills').i18n();
-    $('#i18_projects').i18n();
-    $('#i18_career').i18n();
-    $('#i18_bibliography').i18n();
-    // $('#i18_blog').i18n();
-    $('#i18_link').i18n();
+    $('.i18container').localize();
+    $('#i18_navbar').localize();
+    $('#i18_about_me').localize();
+    $('#i18_skills').localize();
+    $('#i18_projects').localize();
+    $('#i18_career').localize();
+    $('#i18_bibliography').localize();
+    // $('#i18_blog').localize();
+    $('#i18_link').localize();
   };
 
   $("[id^=set_lang]").each(function() {
     var $this = $(this);
     $this.on('click', function() {
-      i18n.setLng($this.data('locale'), translate);
+      i18next.changeLanguage($this.data('locale'), translate);
     });
   });
 
-  i18n.init(i18nOpts, translate);
+  i18next
+    .use(i18nextHttpBackend)
+    .init(i18nOpts, translate);
+  jqueryI18next.init(i18next, $, { useOptionsAttr: true })
 });

@@ -8,11 +8,12 @@ module.exports = {
             'node_modules/jquery/dist/jquery.js',
             'static/js/bs3-typeahead.js',//
             'node_modules/bootstrap/dist/js/bootstrap.js',
-            'node_modules/chart.js/dist/Chart.js',
+            'node_modules/chart.js/dist/chart.umd.js',
             'node_modules/pace-progress/pace.js',
             'node_modules/wowjs/dist/wow.js',
             'static/js/scroll.js',
-            'static/js/count.js'
+            'static/js/count.js',
+            'static/js/github_api.js'
         ]
     }, {
         name: 'i18next page',
@@ -20,7 +21,9 @@ module.exports = {
         prefix: 'i18-',
         type: 'js',
         list: [
-            'static/js/i18next.min.js',
+            'node_modules/i18next/i18next.min.js',
+            'node_modules/i18next-http-backend/i18nextHttpBackend.min.js',
+            'node_modules/jquery-i18next/jquery-i18next.min.js',
             'static/js/localization.js'
         ]
     }, {

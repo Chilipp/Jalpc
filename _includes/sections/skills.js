@@ -8,7 +8,7 @@ var gsTableShown = false;
 var myRadarChart_cs, myRadarChart_gs;
 var ctx_cs, ctx_gs;
 
-$(document).ready(function(){
+window.addEventListener("load", function(){
     drawGsChart();
     drawCsChart();
 });
@@ -20,6 +20,7 @@ function drawGsChart() {
         labels: "{% for skill in site.data.index.skills %}{{ skill.name }}{% unless forloop.last %},{% endunless %}{% endfor %}".split(","),
         datasets: [{
             label: "Skill",
+            fill: true,
             backgroundColor: "rgba(179,181,198,0.2)",
             borderColor: "#3385FF",
             pointBackgroundColor: "#3385FF",
@@ -33,28 +34,38 @@ function drawGsChart() {
         type: 'radar',
         data: data_gs,
         options: {
-            scale: {
-                responsive: true,
-                ticks: {min: 0, max: 100},
-                lineArc: false,
-                pointLabels: {fontSize: 14},
+            scales: {
+                r: {
+                    suggestedMin: 0,
+                    suggestedMax: 100,
+                    pointLabels: {
+                        font: {
+                            size: 16
+                        }
+                    }
+                }
             },
-            legend: {display: false},
+            pointRadius: 5,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        footer: function (context) {
+                            return numProjects(context[0].label);}
+                    }
+                }
+            },
             title: {
                 display: false,
                 text: 'General skills'
             },
-            tooltips: {
-                callbacks: {
-                    footer: function(items, data) {
-                        return numProjects(data.labels[items[0].index]);}
+            onClick: (e, elements, chart) => {
+                if (elements[0]) {
+                    let i = elements[0].index;
+                    switch2desc(chart.data.labels[i]);
                 }
             }
         }
-    });
-
-    $('#gs').click(function (e) {
-        onLabelClick(e, myRadarChart_gs, ctx_gs)
     });
 }
 
@@ -64,6 +75,7 @@ function drawCsChart() {
         labels: "{% for skill in site.data.index.language_skills %}{{ skill.name }}{% unless forloop.last %},{% endunless %}{% endfor %}".split(","),
         datasets: [{
             label: "Coding skills",
+            fill: true,
             backgroundColor: "rgba(179,181,198,0.2)",
             borderColor: "#3385FF",
             pointBackgroundColor: "#3385FF",
@@ -78,28 +90,38 @@ function drawCsChart() {
         type: 'radar',
         data: data,
         options: {
-            scale: {
-                responsive: true,
-                ticks: {min: 0, max: 100},
-                lineArc: false,
-                pointLabels: {fontSize: 14},
+            scales: {
+                r: {
+                    suggestedMin: 0,
+                    suggestedMax: 100,
+                    pointLabels: {
+                        font: {
+                            size: 16
+                        }
+                    }
+                }
             },
-            legend: {display: false},
+            pointRadius: 5,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        footer: function(context) {
+                            return numProjects(context[0].label);}
+                    }
+                }
+            },
             title: {
                 display: false,
                 text: 'Programming languages'
             },
-            tooltips: {
-                callbacks: {
-                    footer: function(items, data) {
-                        return numProjects(data.labels[items[0].index]);}
+            onClick: (e, elements, chart) => {
+                if (elements[0]) {
+                    let i = elements[0].index;
+                    switch2desc(chart.data.labels[i]);
                 }
             }
         }
-    });
-
-    $('#cs').click(function (e) {
-    	onLabelClick(e, myRadarChart_cs, ctx_cs)
     });
 }
 
@@ -136,7 +158,7 @@ function switch2desc(skill) {
         case "{{ skill.name }}": {
             document.getElementById('skill-name-gs').innerHTML = skill + ' <span class="caret"></span>';
             document.getElementById('skill-desc-gs').innerHTML = (
-                `<span data-i18n="[html]skill.{{ skill.i18n }}">
+                `<span data-i18n="[html]skill.{{ skill.i18n }}" id="skill-desc-gs-i18n">
                   {% if skill.desc.en %}{{ skill.desc.en | markdownify }}{% else %}{{ skill.desc | markdownify }}{% endif %}
                 </span><br><br>
                 <ul class='list-inline dotted-items desc-items'>
@@ -173,6 +195,7 @@ function switch2desc(skill) {
             );
             $("#table-gs").hide();
             switch2skillGs();
+            $("#skill-desc-gs-i18n").localize();
             break;
         }
         {% endfor %}
@@ -187,7 +210,7 @@ function switch2desc(skill) {
         case "{{ skill.name }}": {
             document.getElementById('skill-name-cs').innerHTML = skill + ' <span class="caret"></span>';
             document.getElementById('skill-desc-cs').innerHTML = (
-                `<span data-i18n="[html]language_skill.{{ skill.i18n }}">
+                `<span data-i18n="[html]language_skill.{{ skill.i18n }}" id="skill-desc-cs-i18n">
                   {% if skill.desc.en %}{{ skill.desc.en | markdownify }}{% else %}{{ skill.desc | markdownify }}{% endif %}
                 </span><br><br>
                 <ul class='list-inline dotted-items desc-items'>
@@ -224,6 +247,7 @@ function switch2desc(skill) {
             );
             $("#table-cs").hide();
             switch2skillCs();
+            $("#skill-desc-cs-i18n").localize();
             break;
         }
         {% endfor %}
@@ -278,62 +302,6 @@ function switch2gs(){
 
 function switch2gsTable(){
     switch2desc("All skills");
-};
-
-function onLabelClick(e, myRadarChart, ctx) {
-    /* show skill description when clicking on a label. */
-    /* based on https://stackoverflow.com/a/37057097 */
-    var helpers = Chart.helpers;
-
-    var eventPosition = helpers.getRelativePosition(e, myRadarChart.chart);
-    var mouseX = eventPosition.x;
-    var mouseY = eventPosition.y;
-
-    var activePoints = [];
-    helpers.each(myRadarChart.scale.ticks, function (label, index) {
-        for (var i = myRadarChart.data.labels.length - 1; i >= 0; i--) {
-            var pointLabelPosition = this.getPointPosition(i, this.getDistanceFromCenterForValue(this.options.reverse ? this.min : this.max) + 5);
-
-            var pointLabelFontSize = helpers.getValueOrDefault(this.options.pointLabels.fontSize, Chart.defaults.global.defaultFontSize);
-            var pointLabeFontStyle = helpers.getValueOrDefault(this.options.pointLabels.fontStyle, Chart.defaults.global.defaultFontStyle);
-            var pointLabeFontFamily = helpers.getValueOrDefault(this.options.pointLabels.fontFamily, Chart.defaults.global.defaultFontFamily);
-            var pointLabeFont = helpers.fontString(pointLabelFontSize, pointLabeFontStyle, pointLabeFontFamily);
-            ctx.font = pointLabeFont;
-
-            var labelsCount = this.pointLabels.length,
-                halfLabelsCount = this.pointLabels.length / 2,
-                quarterLabelsCount = halfLabelsCount / 2,
-                upperHalf = (i < quarterLabelsCount || i > labelsCount - quarterLabelsCount),
-                exactQuarter = (i === quarterLabelsCount || i === labelsCount - quarterLabelsCount);
-            var width = ctx.measureText(this.pointLabels[i]).width;
-            var height = pointLabelFontSize;
-
-            var x, y;
-
-            if (i === 0 || i === halfLabelsCount){
-                x = pointLabelPosition.x - width / 2;
-            } else if (i < halfLabelsCount){
-                x = pointLabelPosition.x;
-            } else{
-                x = pointLabelPosition.x - width;
-            }
-            if (exactQuarter){
-                y = pointLabelPosition.y - height / 2;
-            } else if (upperHalf){
-                y = pointLabelPosition.y - height;
-            } else {
-                y = pointLabelPosition.y
-            }
-
-            if ((mouseY >= y && mouseY <= y + height) && (mouseX >= x && mouseX <= x + width)){
-                activePoints.push({ index: i, label: this.pointLabels[i] });}
-        }
-    }, myRadarChart.scale);
-
-    var firstPoint = activePoints[0];
-    if (firstPoint !== undefined) {
-        switch2desc(firstPoint.label);
-    }
 };
 
 function isElementInViewport (el) {
