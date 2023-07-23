@@ -24,6 +24,7 @@
     - Python
     - Bash
     - Javascript
+    - Kubernetes
 
 - name: psyplot
   i18n: psyplot
@@ -66,6 +67,7 @@
   repo: django-academic-community
   codebase_user: hcdc/django/clm-community
   desc: Web portal to manage and collaborate within an academic community
+  img: /static/assets/img/landing/django.png
   long_desc: |
     Collaboration Platforms for harmonization and building a shared understanding
     of communities are essential components in today's academic environment.
@@ -93,11 +95,14 @@
     - Coding
     - Conceptualization
     - Python
+    - Kubernetes
 
 - name: Kubernetes OpenShift Deployment
   i18n: kubernetes
   repo: helm-chart-template
   codebase_user: hcdc/software-templates
+  img: /static/assets/img/landing/kubernetes.png
+  img_title: Google, Public domain, via Wikimedia Commons
   desc: Software templates and Helm Charts for secure and sustainable deployment via Kubernetes
   long_desc: |
     Web applications have become increasingly vital in scientific settings,
