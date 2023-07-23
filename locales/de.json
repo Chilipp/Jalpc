@@ -22,7 +22,7 @@ permalink: /locales/de.json
   },
   "skills":{
     "my_skills": "Meine Kenntnisse",
-    "info": "Klicke auf die Beschriftungen im Diagramm für mehr Informationen, oder öffne den Tab für <i>Ausführliche Beschreibungen</i>.",
+    "info": "Klicke auf die Punkte im Diagramm für mehr Informationen, oder öffne den Tab für <i>Ausführliche Beschreibungen</i>.",
     "general": "Allgemeine Kenntnisse",
     "coding": "Programmiersprachen",
     "diagram": "Diagramm",
@@ -41,39 +41,18 @@ permalink: /locales/de.json
     {%- endfor %}
   },
   "projects":{
+    {%- assign projects = site.data.index.projects | where_exp: "project", "project.i18n != nil" %}
+    {%- for project in projects %}
+    "{{ project.i18n }}": {{ project.desc.de | default: project.desc.en | markdownify | jsonify }},
+    "{{ project.i18n }}_desc": {{ project.long_desc.de | default: project.long_desc.en | markdownify | jsonify }},
+    {%- endfor %}
+    {%- assign projects = site.data.index.side_projects | where_exp: "project", "project.i18n != nil" %}
+    {%- for project in projects %}
+    "{{ project.i18n }}": {{ project.desc.de | default: project.desc.en | markdownify | jsonify }},
+    "{{ project.i18n }}_desc": {{ project.long_desc.de | default: project.long_desc.en | markdownify | jsonify }},
+    {%- endfor %}
     "my_projects": "Meine Projekte",
-
-    "hcdc": "Helmholtz Coastal Data Center",
-    "hcdc_desc": "Das Helmholtz Coastal Data Center (HCDC) ist die zentrale Anlaufstelle für wissenschaftliches Datenmanagement am Institut für Küstenforschung. Die neue zentrale Arbeitsgruppe verfügt über eine breite Expertise und setzt sich aus Geowissenschaftlern, Programmierern, Webentwicklern sowie Datenbank- und Metadatenmanagern zusammen. Ein Ziel dieser Einheit ist es, Daten der Küsten- und Meeresforschung mit Hilfe eines zentralen Datenportals zusammenzuführen und unterschiedlichen Nutzerkreisen nachhaltig nutzbar zu machen. HCDC spricht daher gleichermaßen die Wissenschaft, die interessierte Öffentlichkeit und Entscheidungsträger für das Management von Küstenregionen und der marinen Umwelt an.",
-
-    "hornet": "Klimarekonstruktionen der Nördlichen Hemisphäre während des Holozäns",
-    "hornet_desc": "Dies ist das zentrale Projekt der <i>Davis Gruppe</i>. Mein Beitrag zu diesem Projekt ist die Entwicklung neuer Methoden zur Rekonstruktion des Klimas basierend auf hundertausenden Pollenproben. Außerdem nutze ich die enstandende Rekonstruktion für weitergehende Analysen, wie zum Beispiel die Entwicklung atmosphärischer Stukturen der oberen Atmosphäre, z.B. der Nordatlantische Oszillation. Eine weitere Aufgabe ist die Entwicklung eines Internetportals über das wir unsere Datenbank mit dem Rest der Welt teilen können.",
-
-    "psyplot": "Python software zur interaktiven Datenvisualisierung",
-    "psyplot_desc": "psyplot ist ein plattformübergreifendes Open Source Python Projekt das hauptsächlich die Visualisierungsfunktionen von matplotlib mit den Datenmanagementfunktionen des xarray Pakets vereint. Die entstehende Software kann dabei sowohl von der Kommandozeile, als auch durch eine Graphische Benutzeroberfläche bedient werden. <br> Der Hauptzweck dieses Projektes ist es, eine Umgebung zu schaffen, die eine schnelle, attraktive, flexible, einfach anzuwendende, einfach zu reproduzierende und ganz besonders eine interaktive Visualisierung und Analyse von Klimamodelldaten ermöglicht. <br> Durch verschiedene Zusatzprogramme visualisiert psyplot georeferenzierte Klimamodelldaten auf rechteckförmigen und unstrukturierten Gittern. Außerdem können Regressionskurven, sowie stratigraphische Diagramme erstellt werden, und mehr. <br> Anwendungsbeispiele gibt es auf <a href=https://psyplot.github.io/examples>psyplot.github.io/examples</a>.",
-
-    "straditize": "Software für die semi-automatische Digitalisierung von Pollendiagrammen und anderen stratigrafischen Diagrammen das per Kommandozeile oder per graphischer Benutzeroberfläche bedient werden kann",
-    "straditize_desc": "STRADITIZE (Stratigraphic Diagram Digitizer) ist ein Open Source Programm mit dem stratigraphische Diagramme in einem einzigen semi-automatischen Vorgang digitalisiert werden können. Es ist darauf ausgerichted, mehrere Teildiagramme zu entdecken welche die selbe vertikale Axis teilen. <br> Mehr Informtation gibt es auf <a href=https://straditize.readthedocs.io>straditize.readthedocs.io</a>.",
-
-    "empd": "Die 'Eurasian Modern Pollen Database'",
-
-    "my_side_projects": "Nebenprojekte",
-
-    "gwgen": "Ein globaler Wettergenerator für tägliche Wetterdaten",
-    "gwgen_desc": "Diese Synthese aus FORTRAN und Python ist ein global anwendbarer Wettergenerator der anhand eines globalen Datensatzes täglicher Wetterstationsdaten mit über 50 Millionen individueller Aufzeichnungen parameterisiert wurde. Er skaliert Windgeschwindigkeit, Niederschlag, Temperatur und Bewölkung von monatlicher auf tägliche Auflösung. <br> Mehr informationen gibt es auf <a href='https://arve-research.github.io/gwgen/'>arve-research.gihub.io/gwgen</a>",
-
-    "iucm": "Ein Model zur Simulation urbaner Wachstums- und Transformationsprozesse bei gleichzeitiger Minimierung von benötigter Transport-Energie",
-    "iucm_desc": "Das 'Integrated Urban Complexity model (IUCm)' is ein relativ einfaches probabilistisches Computermodell um sogennante 'climate-smart urban forms' zu berechnen. Diese verringern transport-bedingte Emissionen durch den Energieverbrauch von urbaner Mobilität. <br> Mehr Informtation gibt es auf <a href='https://iucm.readthedocs.io'>iucm.readthedocs.io</a>",
-
-    "docrep": "Python Programm für die Wiederverwertung von Dokumentationen",
-    "docrep_desc": "Das 'documentation repetition module (docrep)' ist ein Python Programm für die Entwickler komplexer und vernetzter Python Programme. Es hilft ihnen gut dokumentierte Software zu erstellen durch die Wiederverwertung von bisher bestehender Dokumentation. <br> Mehr Information gibt es auf <a href='https://docrep.readthedocs.io'>docrep.readthedocs.io</a>",
-
-    "sphinx-nbexamples": "Python Software zur Einbindung von 'Jupyter notebooks' in einer Sphinx-generierten Dokumentation",
-    "sphinx-nbexamples_desc": "Dieses Python Paket erstelle eine Gallierie aus 'Jupyter Notebooks' für Dokumentation, die durch Pythons Sphinx Paket erstellt wurden. <br> Beispiele gibt es auf <a href='https://sphinx-nbexamples.readthedocs.io'>sphinx-nbexamples.readthedocs.io</a>",
-
-    "model-organization": "Python Programm für die transparente Organisation von Computer-basierten Modellen",
-
-    "funcargparse": "Python Programm um einen Kommandozeilen-Parser anhand von Dokumentationen zu generieren"
+    "my_side_projects": "Nebenprojekte"
   },
   "career":{
     "description": "Während meines Bachelorstudiums entschied ich, meine Forschung mehr auf die Entwicklung unseres Planeten zu fokusieren. Trotz meiner Leidenschaft für die Mathematik in der physikalischen Grundlagenforschung. Wegen meiner theoretischen Neigungen fing ich an zu programmieren und beschäftigte mich mit der Entwicklung von Klimamodellen. Besonders interessiert mich dabei die Analyse großer Datenmengen und deren Visualisierung. Ich finde es immer wieder erstaunlich wie viel neues Wissen wir durch visuelle und statistische Auswertungen generieren können. Deshalb freue ich mich immer, neue Methoden zu erlernen, zu entwickeln und sie mit anderen zu teilen.",

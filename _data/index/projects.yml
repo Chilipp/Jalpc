@@ -5,17 +5,30 @@
   i18n: hcdc
   url: https://hcdc.hereon.de
   img: /static/assets/img/landing/hcdc.svg
-  desc: Helmholtz Coastal Data Center
-  long_desc: |
-    The Helmholtz Coastal Data Center (HCDC) is the central point of contact
-    for scientific data management at the Institute of Coastal Research. The
-    new central working group possesses broad expertise and consists of
-    geoscientists, programmers and web developers as well as database and
-    metadata managers. One aim of the unit is to merge data from coastal and
-    marine research with the help of a central data portal and to provide
-    sustainable access to different user groups. HCDC therefore equally
-    addresses the scientific field, the interested public and decision makers
-    who manage coastal regions and the marine environment.
+  desc:
+    en: Helmholtz Coastal Data Center
+  long_desc:
+    en: |
+      The Helmholtz Coastal Data Center (HCDC) is the central point of contact
+      for scientific data management at the Institute of Coastal Research. The
+      new central working group possesses broad expertise and consists of
+      geoscientists, programmers and web developers as well as database and
+      metadata managers. One aim of the unit is to merge data from coastal and
+      marine research with the help of a central data portal and to provide
+      sustainable access to different user groups. HCDC therefore equally
+      addresses the scientific field, the interested public and decision makers
+      who manage coastal regions and the marine environment.
+    de: |
+      Das Helmholtz Coastal Data Center (HCDC) ist die zentrale Anlaufstelle
+      für wissenschaftliches Datenmanagement am Institut für Küstenforschung.
+      Die neue zentrale Arbeitsgruppe verfügt über eine breite Expertise und
+      setzt sich aus Geowissenschaftlern, Programmierern, Webentwicklern sowie
+      Datenbank- und Metadatenmanagern zusammen. Ein Ziel dieser Einheit ist
+      es, Daten der Küsten- und Meeresforschung mit Hilfe eines zentralen
+      Datenportals zusammenzuführen und unterschiedlichen Nutzerkreisen
+      nachhaltig nutzbar zu machen. HCDC spricht daher gleichermaßen die
+      Wissenschaft, die interessierte Öffentlichkeit und Entscheidungsträger
+      für das Management von Küstenregionen und der marinen Umwelt an.
   skills:
     - Coding
     - Conceptualization
@@ -32,28 +45,44 @@
   url: https://psyplot.github.io
   repo: psyplot
   img: /static/assets/img/landing/psyplot.png
-  desc: Python framework for interactive data visualization
-  long_desc: |
-    psyplot is a cross-platform open source python project that mainly
-    combines the plotting utilities of matplotlib and the data
-    management of the xarray package and integrates them into a
-    software that can be used via command-line and via a GUI. It forms the basis for many of my data analysis tasks.
-    <br>
-    The main purpose is to have a framework that allows a fast, attractive,
-    flexible, easily applicable, easily reproducible and especially an interactive
-    visualization and analysis of data.
-    <br>
-    Through various plugins psyplot visualizes georeferenced climate model data
-    on rectangular and unstructured grids, regressions, stratigraphic diagrams
-    and more. The plugins are:
-    <ul>
-    <li><a href="https://psyplot.github.io/psy-simple">psy-simple</a> for simple visualizations</li>
-    <li><a href="https://psyplot.github.io/psy-maps">psy-maps</a> for visualizations of georeferenced data</li>
-    <li><a href="https://psyplot.github.io/psy-reg">psy-reg</a> for the visualization of statistical fits</li>
-    <li><a href="https://psyplot.github.io/psyplot-gui">psyplot-gui</a> for a graphical user interface</li>
-    <li><a href="https://psy-strat.readthedocs.io">psy-strat</a> for the visualization of stratigraphic data, such as pollen diagrams</li>
-    </ul>
-    Examples are available at <a href=https://psyplot.github.io/examples>psyplot.github.io/examples</a>.
+  desc:
+    en: Python framework for interactive data visualization
+    de: Python software zur interaktiven Datenvisualisierung
+  long_desc:
+    en: |
+      psyplot is a cross-platform open source python project that mainly
+      combines the plotting utilities of matplotlib and the data management of
+      the xarray package and integrates them into a software that can be used
+      via command-line and via a GUI.
+
+      The main purpose is to have a framework that allows a fast, attractive,
+      flexible, easily applicable, easily reproducible and especially an
+      interactive visualization and analysis of data.
+
+      Through various plugins psyplot visualizes georeferenced climate model
+      data on rectangular and unstructured grids, regressions, stratigraphic
+      diagrams and more.
+
+      Examples are available at
+      [psyplot.github.io/examples](https://psyplot.github.io/examples).
+    de: |
+      psyplot ist ein plattformübergreifendes Open Source Python Projekt das
+      hauptsächlich die Visualisierungsfunktionen von matplotlib mit den
+      Datenmanagementfunktionen des xarray Pakets vereint. Die entstehende
+      Software kann dabei sowohl von der Kommandozeile, als auch durch eine
+      Graphische Benutzeroberfläche bedient werden.
+
+      Der Hauptzweck dieses Projektes ist es, eine Umgebung zu schaffen, die
+      eine schnelle, attraktive, flexible, einfach anzuwendende, einfach zu
+      reproduzierende und ganz besonders eine interaktive Visualisierung und
+      Analyse von Klimamodelldaten ermöglicht.
+      Durch verschiedene Zusatzprogramme visualisiert psyplot georeferenzierte
+      Klimamodelldaten auf rechteckförmigen und unstrukturierten Gittern.
+      Außerdem können Regressionskurven, sowie stratigraphische Diagramme
+      erstellt werden, und mehr.
+
+      Anwendungsbeispiele gibt es auf
+      [psyplot.github.io/examples](https://psyplot.github.io/examples)
   skills:
     - Version Control
     - Open Source Software development
@@ -66,27 +95,53 @@
   i18n: djac
   repo: django-academic-community
   codebase_user: hcdc/django/clm-community
-  desc: Web portal to manage and collaborate within an academic community
+  desc:
+    en: Web portal to manage an academic community and to foster collaboration
+    de: Online portal um eine wissenschaftliche Community zu managen und die Zusammenarbeit zu fördern
   img: /static/assets/img/landing/django.png
-  long_desc: |
-    Collaboration Platforms for harmonization and building a shared understanding
-    of communities are essential components in today's academic environment.
-    With the help of modern software tools and advancing digitization, our
-    communities can improve collaboration via event, project and file
-    management, and communication. The variety of tasks and tools needed in
-    interdisciplinary communities, however, pose a considerable obstacle for
-    community members.
+  long_desc:
+    en: |
+      Collaboration Platforms for harmonization and building a shared understanding
+      of communities are essential components in today's academic environment.
+      With the help of modern software tools and advancing digitization, our
+      communities can improve collaboration via event, project and file
+      management, and communication. The variety of tasks and tools needed in
+      interdisciplinary communities, however, pose a considerable obstacle for
+      community members.
 
-    We see them in the administration, and especially when on-boarding new
-    members with different levels of experience (from student to senior
-    scientist). Here, user-friendly, technical support is needed. We are
-    involved in many communities, particularly in the Climate Limited-area
-    Modelling Community (CLM-Community) and the Helmholtz Metadata
-    Collaboration (HMC). With the input of these (and more) communities, I
-    developed the DJAC-Platform, an open-source, Python
-    (Django)-based website. DJAC manages communities from a single institute to
-    an (inter-)national community with hundreds and more participating research
-    institutions.
+      We see them in the administration, and especially when on-boarding new
+      members with different levels of experience (from student to senior
+      scientist). Here, user-friendly, technical support is needed.
+      As part of my work, I am involved in many communities, particularly in
+      the Climate Limited-area Modelling Community (CLM-Community) and the
+      Helmholtz Metadata Collaboration (HMC). With the input of these
+      (and more) communities, I developed the DJAC-Platform, an open-source,
+      Python (Django)-based website. DJAC manages communities from a single
+      institute to an (inter-)national community with hundreds and more
+      participating research institutions.
+    de: |
+      Kollaborationsplattformen zur Harmonisierung und zum Aufbau einer
+      _Knowledge Base_ in einer _Community_ sind wesentliche Bestandteile des
+      heutigen akademischen Umfelds.
+
+      Mit Hilfe moderner Softwaretools und der fortschreitenden Digitalisierung
+      können unsere Communities die Zusammenarbeit durch Veranstaltungs-,
+      Projekt- und Dateimanagement sowohl Verwaltung, also auch Kommunikation
+      verbessern. Die Vielfalt der Aufgaben und Werkzeuge, die in
+      interdisziplinären Communities stellen jedoch eine erhebliche Hürde für
+      Community-Mitglieder dar.
+
+      Wir sehen sie in der Verwaltung und insbesondere beim Onboarding neuer
+      Mitgliedern mit unterschiedlichem Erfahrungsstand (vom Studenten bis zum
+      erfahrenen Wissenschaftler). Hier ist eine benutzerfreundliche, technische
+      Unterstützung erforderlich. Ich bin bei meiner Arbeit an vielen
+      Gemeinschaften beteiligt, insbesondere an der Climate Limited-area
+      Modeling Community (CLM-Community) und der Helmholtz Metadata
+      Collaboration (HMC). Mit dem Input dieser (und weiterer) Gemeinschaften
+      habe ich die DJAC-Plattform entwickelt, eine Open-Source, Python
+      (Django)-basierte Website. DJAC verwaltet Gemeinschaften von einem
+      einzelnen Institut bis einer (inter-)nationalen Gemeinschaft mit
+      hunderten und mehr teilnehmenden Forschungs-Einrichtungen.
   skills:
     - Version Control
     - Open Source Software development
@@ -103,23 +158,42 @@
   codebase_user: hcdc/software-templates
   img: /static/assets/img/landing/kubernetes.png
   img_title: Google, Public domain, via Wikimedia Commons
-  desc: Software templates and Helm Charts for secure and sustainable deployment via Kubernetes
-  long_desc: |
-    Web applications have become increasingly vital in scientific settings,
-    facilitating knowledge transfer, collaboration, and data publication.
-    Establishing a secure IT infrastructure to accommodate a diverse range of
-    web applications and technologies however poses significant challenges.
-    Addressing this issue, I developed a secure yet adaptable approach to deploy
-    and maintain multiple web applications.
+  desc:
+    en: Software templates and Helm Charts for secure and sustainable deployment via Kubernetes
+    de: Software Templates und Helm Charts für ein sichere und nachhaltige Deployments über Kubernetes
+  long_desc:
+    en: |
+      Web applications have become increasingly vital in scientific settings,
+      facilitating knowledge transfer, collaboration, and data publication.
+      Establishing a secure IT infrastructure to accommodate a diverse range of
+      web applications and technologies however poses significant challenges.
+      Addressing this issue, I developed a secure yet adaptable approach to deploy
+      and maintain multiple web applications.
 
-    The concept leverages Kubernetes
-    OpenShift, employing a standardized, git-centric workflow to document web
-    applications, responsibilities, and technologies. Security measures include
-    regular image updates, micro-segmentation, and least privilege roles. The
-    concept embraces reproducibility and division of labor through the
-    utilization of cookiecutter templates, Helm charts, and Ansible. It
-    incorporates essential concepts such as CI/CD, scalability, and
-    reproducibility, benefiting the entire research institution.
+      The concept leverages Kubernetes
+      OpenShift, employing a standardized, git-centric workflow to document web
+      applications, responsibilities, and technologies. Security measures include
+      regular image updates, micro-segmentation, and least privilege roles. The
+      concept embraces reproducibility and division of labor through the
+      utilization of cookiecutter templates, Helm charts, and Ansible. It
+      incorporates essential concepts such as CI/CD, scalability, and
+      reproducibility, benefiting the entire research institution.
+    de: |
+      Webanwendungen sind in der Wissenschaft immer wichtiger geworden,
+      Sie erleichtern den Wissenstransfer, die Zusammenarbeit und die Veröffentlichung von Daten.
+      Die Einrichtung einer sicheren IT-Infrastruktur für ein breites Spektrum von
+      Webanwendungen und -technologien unterzubringen, stellt jedoch eine große Herausforderung dar.
+      Deshalb habe ich ein sicheres und dennoch anpassungsfähiges Konzept für die Bereitstellung
+      mehrere Webanwendungen entwickelt.
+
+      Das Konzept nutzt Kubernetes OpenShift und verwendet einen
+      standardisierten, Git-zentrierten Arbeitsablauf um Web Anwendungen,
+      Verantwortlichkeiten und Technologien zu dokumentieren. Zu den Sicherheitsmaßnahmen gehören
+      regelmäßige Image-Updates, Mikro-Segmentierung und _least privilege_ Rollen.
+      Das Konzept umfasst Reproduzierbarkeit und Arbeitsteilung durch die
+      Verwendung von Cookiecutter-Vorlagen, Helm Charts und Ansible. Es
+      umfasst wesentliche Konzepte wie CI/CD, Skalierbarkeit und
+      Reproduzierbarkeit, wovon die gesamte Forschungseinrichtung profitiert.
   skills:
     - Version Control
     - Open Source Software development

@@ -22,7 +22,7 @@ permalink: /locales/en.json
   },
   "skills":{
     "my_skills": "My Skills",
-    "info": "Click on the diagram labels for more info or go to <i>Descriptions</i>.",
+    "info": "Click on the diagram points for more info or go to <i>Descriptions</i>.",
     "general": "General skills",
     "coding": "Programming languages",
     "diagram": "Diagram",
@@ -41,38 +41,18 @@ permalink: /locales/en.json
     {%- endfor %}
   },
   "projects":{
+    {%- assign projects = site.data.index.projects | where_exp: "project", "project.i18n != nil" %}
+    {%- for project in projects %}
+    "{{ project.i18n }}": {{ project.desc.en | markdownify | jsonify }},
+    "{{ project.i18n }}_desc": {{ project.long_desc.en | markdownify | jsonify }},
+    {%- endfor %}
+    {%- assign projects = site.data.index.side_projects | where_exp: "project", "project.i18n != nil" %}
+    {%- for project in projects %}
+    "{{ project.i18n }}": {{ project.desc.en | markdownify | jsonify }},
+    "{{ project.i18n }}_desc": {{ project.long_desc.en | markdownify | jsonify }},
+    {%- endfor %}
     "my_projects": "My Projects",
-
-    "hcdc": "Helmholtz Coastal Data Center",
-    "hcdc_desc": "The Helmholtz Coastal Data Center (HCDC) is the central point of contact for scientific data management at the Institute of Coastal Research. The new central working group possesses broad expertise and consists of geoscientists, programmers and web developers as well as database and metadata managers. One aim of the unit is to merge data from coastal and marine research with the help of a central data portal and to provide sustainable access to different user groups. HCDC therefore equally addresses the scientific field, the interested public and decision makers who manage coastal regions and the marine environment.",
-
-    "hornet": "Holocene Climate Reconstruction for the Northern Hemisphere Extra-tropics",
-    "hornet_desc": "This is the central project of the <i>Davis Group</i>. My contributions to this project are the development of new methods on how we can reconstruct the climate from hundreds of thousands of pollen samples, as well as further analysis of the dataset, e.g. the reconstruction of atmospheric teleconnection patterns, such as the North Atlantic Oscillation (NAO). Another task is to develop a web-viewer in order to share our database with the rest of the scientific community.",
-
-    "psyplot": "Python framework for interactive data visualization",
-    "psyplot_desc": "psyplot is a cross-platform open source python project that mainly combines the plotting utilities of matplotlib and the data management of the xarray package and integrates them into a software that can be used via command-line and via a GUI. <br> The main purpose is to have a framework that allows a fast, attractive, flexible, easily applicable, easily reproducible and especially an interactive visualization and analysis of data. <br> Through various plugins psyplot visualizes georeferenced climate model data on rectangular and unstructured grids, regressions, stratigraphic diagrams and more. <br> Examples are available at <a href=https://psyplot.github.io/examples>psyplot.github.io/examples</a>.",
-
-    "straditize": "A software for a semi-automatic digitization of pollen diagrams or other types of stratigraphic diagrams using the command line or a graphical user interface.",
-    "straditize_desc": "STRADITIZE (Stratigraphic Diagram Digitizer) is an open-source program that allows stratigraphic figures to be digitized in a single semi-automated operation. It is designed to detect multiple plots of variables analyzed along the same vertical axis, whether this is a sediment core or any similar depth/time series. <br> More at <a href=https://straditize.readthedocs.io>straditize.readthedocs.io</a>.",
-
-    "empd": "The Eurasian Modern Pollen Database",
-
-    "my_side_projects": "Side Projects",
-
-    "gwgen": "A global weather generator for daily data",
-    "gwgen_desc": "This synthesis of FORTRAN and Python is a globally applicable weather generator parameterized through a global dataset of weather station data with more than 50 million individual daily records. It downscales wind speed, precipitation, temperature, and cloud cover from monthly to daily resolution. <br> More at <a href='https://arve-research.github.io/gwgen/'>arve-research.gihub.io/gwgen</a>",
-
-    "iucm": "A model to simulate urban growth and transformation with the objective of minimising the energy required for transportation.",
-    "iucm_desc": "The Integrated Urban Complexity model (IUCm) is a relatively simple probablistic computational model to compute 'climate-smart urban forms', that cut down emissions related to energy consumption from urban mobility. <br> More at <a href='https://iucm.readthedocs.io'>iucm.readthedocs.io</a>",
-
-    "docrep": "Python package for docstring repetition",
-    "docrep_desc": "The documentation repetition module (docrep) targets developpers that develop complex and nested Python APIs and helps them to create a well-documented software. <br> More at <a href='https://docrep.readthedocs.io'>docrep.readthedocs.io</a>",
-
-    "sphinx-nbexamples": "Include Jupyter notebooks in a sphinx documentation",
-    "sphinx-nbexamples_desc": "This python package creates an example gallery for documentations generated by pythons sphinx package out of a bunch of jupyter notebooks. <br> More examples at <a href='https://sphinx-nbexamples.readthedocs.io'>sphinx-nbexamples.readthedocs.io</a>",
-
-    "model-organization": "Python package for a transparent organization of computational models",
-    "funcargparse": "Python package to create command line parsers from docstrings"
+    "my_side_projects": "Side Projects"
   },
   "career":{
     "description": "During my Bachelor I realized that I really want to do research on how our world is evolving. This wish was even stronger than my joy about the beauty of maths in physics. I have strong theoretical skills so I started coding and to develop climate models. This is now the way to go for me and since then I rejoice in data analysis and visualization. We can extract so much new knowledge out of these large data sets through visual and statistical exploration. Hence I am always keen to learn and develop new techniques and to share them with others.",
