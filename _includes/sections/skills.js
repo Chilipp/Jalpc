@@ -136,7 +136,9 @@ function switch2desc(skill) {
         case "{{ skill.name }}": {
             document.getElementById('skill-name-gs').innerHTML = skill + ' <span class="caret"></span>';
             document.getElementById('skill-desc-gs').innerHTML = (
-                `{{ skill.desc }}<br><br>
+                `<span data-i18n="[html]skill.{{ skill.i18n }}">
+                  {% if skill.desc.en %}{{ skill.desc.en }}{% else %}{{ skill.desc }}{% endif %}
+                </span><br><br>
                 <ul class='list-inline dotted-items desc-items'>
                 <li><span>Projects</span></li>
                 {% for project in all_projects %}

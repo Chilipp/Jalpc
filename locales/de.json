@@ -1,3 +1,7 @@
+---
+layout: none
+permalink: /locales/de.json
+---
 {
   "website":{
     "title": "Philipp S. Sommer"
@@ -23,6 +27,13 @@
     "coding": "Programmiersprachen",
     "diagram": "Diagramm",
     "desc": "Ausführliche Beschreibungen"
+  },
+  "skill": {
+    {%- for skill in site.data.index.skills %}
+    {%- if skill.i18n and skill.desc.de %}
+      "{{ skill.i18n }}": {{ skill.desc.de | jsonify }}
+    {%- endif %}
+    {%- endfor %}
   },
   "projects":{
     "my_projects": "Meine Projekte",
