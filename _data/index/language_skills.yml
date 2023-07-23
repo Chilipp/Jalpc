@@ -2,56 +2,240 @@
 
 - name: Python
   percentage: 100
-  desc: |
-    Python is my main programming language that I use for almost everything on the computer. For the post processing of climate model data I am using <a href="http://xarray.pydata.org/en/stable/">xarray</a> and <a href="http://docs.dask.org/en/latest/">dask</a>, libraries for multi-dimensional datasets that support out-of-core computing. Other types of data are mainly analysed with <a href="https://pandas.pydata.org/">pandas</a>, <a href="https://www.numpy.org/">numpy</a> and <a href="https://scikit-learn.org/">scikit-learn</a>. Additionally I have expert knowledge about the <a href="https://matplotlib.org/">matplotlib</a> package that I use for visualizations and the <a href="https://www.riverbankcomputing.com/software/pyqt/intro">PyQt</a> package that I use for the development of graphical user interfaces.
-    <br>
-    Most of my time, I spend with the development of new python software for climate analysis. During my PhD I worked on <a href="https://psyplot.github.io">psyplot</a>, it's <a href="https://psyplot.github.io/psyplot/plugins.html">plugins</a> and <a href="https://straditize.readthedocs.io">straditize</a>,
-    and several small python packages mostly targeting other python developers that I published via <a href="https://pypi.org/user/Chilipp/" target="_blank">PyPi</a> and <a href="https://github.com/conda-forge?utf8=%E2%9C%93&q=Chilipp+in%3Areadme" target="_blank">anaconda (via conda-forge)</a>.
+  i18n: python
+  desc:
+    en: |
+      Python is my main programming language that I use for almost everything on
+      the computer. For the post processing of climate model data I am using
+      [xarray](http://xarray.pydata.org/en/stable/) and
+      [dask](https://docs.dask.org/en/latest/), libraries for multi-dimensional
+      datasets that support out-of-core computing. Other types of data are mainly
+      analysed with [pandas](https://pandas.pydata.org/), [numpy](https://www.numpy.org/)
+      and [scikit-learn](https://scikit-learn.org/). Additionally I have expert
+      knowledge about the [matplotlib](https://matplotlib.org/) package that I
+      use for visualizations and the [PyQt](https://www.riverbankcomputing.com/software/pyqt/intro)
+      package that I use for the development of graphical user interfaces.
 
-    Finally, to communicate my data analysis to my colleagues, I am using jupyter notebooks from which I then often interface into other languages,
-    such as <a href="javascript:switch2desc('R')">R</a>, <a href="javascript:switch2desc('Matlab')">Matlab</a> or <a href="javascript:switch2desc('Postgres')">Postgres</a>. In the rare cases where I need more computational efficiency and cannot solve it with numpy, I also use <a href="https://cython.org/">Cython</a>.
+      A big portion of my time, I spend with the development of new python software for
+      climate analysis. During my PhD I worked on [psyplot](https://psyplot.github.io),
+      it's [plugins](https://psyplot.github.io/psyplot/plugins.html),
+      [straditize](https://straditize.readthedocs.io),
+      and several small python packages. I published them on
+      [PyPi](https://pypi.org/user/Chilipp) and
+      [conda (via conda-forge)](https://github.com/orgs/conda-forge/repositories?q=Chilipp+in%3Areadme&type=all&language=&sort=).
 
-    Since about 3 years I am additionally working a lot with web deployment via Django where I created <a href="https://codebase.helmholtz.cloud/hcdc/django">small generic projects and frameworks for large community portals</a>.
+      Finally, to communicate my data analysis to my colleagues, I am using
+      jupyter notebooks from which I then often interface into other languages,
+      such as [R](javascript:switch2desc('R')). In the rare cases where I need
+      more computational efficiency and cannot solve it with numpy, I also use
+      [Cython](https://cython.org/).
+
+      Since about 3 years I am additionally working a lot with web deployment via
+      Django where I created
+      [small generic projects and frameworks for large community portals](https://codebase.helmholtz.cloud/hcdc/django).
+    de: |
+      Python ist meine Hauptprogrammiersprache, die ich für fast alles auf dem
+      Computer verwende. Für die Nachbearbeitung von Klimamodelldaten
+      verwende ich [xarray](http://xarray.pydata.org/en/stable/) und
+      [dask](https://docs.dask.org/en/latest/), Bibliotheken für
+      mehrdimensionale Datensätze, die Out-of-Core-Computing unterstützen.
+      Andere Arten von Daten werden hauptsächlich mit
+      [pandas](https://pandas.pydata.org/), [numpy](https://www.numpy.org/)
+      und [scikit-learn](https://scikit-learn.org/) analysiert.
+      Zusätzlich habe ich Expertenwissen über das
+      [matplotlib](https://matplotlib.org/)-Paket, das ich für Visualisierungen
+      verwende, und das [PyQt](https://www.riverbankcomputing.com/software/pyqt/intro)-Paket,
+      das ich für die Entwicklung von grafischen Benutzeroberflächen nutze.
+
+      Einen großen Teil meiner Zeit verbringe ich mit der Entwicklung neuer
+      Python-Software für Klimaanalysen. Während meiner Promotion habe ich an
+      [psyplot](https://psyplot.github.io), seinen [Plugins](https://psyplot.github.io/psyplot/plugins.html),
+      [straditize](https://straditize.readthedocs.io) und mehreren kleinen
+      Python-Paketen gearbeitet. Diese habe ich dann über
+      [PyPi](https://pypi.org/user/Chilipp) und
+      [conda (via conda-forge)](https://github.com/orgs/conda-forge/repositories?q=Chilipp+in%3Areadme&type=all&language=&sort=)
+      veröffentlicht.
+
+      Um meine Datenanalysen an meine Kollegen weiterzugeben, verwende ich
+      Jupyter-Notebooks, von denen aus ich dann oft Schnittstellen zu anderen
+      Sprachen, wie z. B. [R](javascript:switch2desc('R')), schaffe. In den
+      seltenen Fällen, in denen ich mehr Rechenleistung benötige und das
+      Problem nicht mit Numpy lösen kann, verwende ich auch
+      [Cython](https://cython.org/).
+
+      Seit etwa 3 Jahren beschäftige ich mich außerdem viel mit Web Deployment
+      via Django, wo ich
+      [kleine generische Projekte und Frameworks für große Community-Portale erstellt habe](https://codebase.helmholtz.cloud/hcdc/django)..
 - name: R
   percentage: 30
-  desc: |
-    I used R in the past for statistical analysis when Python is not good enough (or too complicated). This involves inverse modelling for climate reconstructions based on proxy data, e.g. through the <a href="https://www.rdocumentation.org/packages/rioja">rioja</a> package, but also for rotated principal component analysis that we use in the HORNET project.
+  i18n: r
+  desc:
+    en: |
+      I used R in the past for statistical analysis when Python is not good
+      enough (or too complicated). This involves inverse modelling for climate
+      reconstructions based on proxy data, e.g. through the
+      [rioja](https://www.rdocumentation.org/packages/rioja) package,
+      but also for rotated principal component analysis that we use in the
+      HORNET project.
+    de: |
+      Ich habe R in der Vergangenheit für statistische Analysen verwendet, wenn
+      Python nicht gut genug (oder zu kompliziert) ist. Dazu gehört die inverse
+      Modellierung für Klimarekonstruktionen auf der Grundlage von Proxydaten,
+      z. B. durch das Paket [rioja](https://www.rdocumentation.org/packages/rioja),
+      aber auch für die _rotated principal component analysis_, die wir im
+      HORNET-Projekt verwenden.
 - name: MATLAB
   percentage: 20
-  desc: |
-    Matlab was one of the first programming languages I learned during my master. I dropped the development with it in favor of the more flexibel open source languages <a href="javascript:switch2desc('Python')">Python</a> and <a href="javascript:switch2desc('R')">R</a>. However, I am still using it sometimes for collaborations with other scientists that only code in Matlab.
+  i18n: matlab
+  desc:
+    en: |
+      Matlab was one of the first programming languages I learned during my
+      master. I dropped the development with it in favor of the more flexibel
+      open source languages [Python](javascript:switch2desc('Python')) and
+      [R](javascript:switch2desc('R')). However, I am still using it sometimes
+      for collaborations with other scientists that only code in Matlab.
+    de: |
+      Matlab war eine der ersten Programmiersprachen, die ich während meines
+      Masterstudiums gelernt habe. Ich habe die Entwicklung damit zugunsten der
+      flexibleren Open-Source-Sprachen [Python](javascript:switch2desc('Python'))
+      und [R](javascript:switch2desc('R')) aufgegeben. Allerdings benutze ich
+      sie noch manchmal für die Zusammenarbeit mit anderen Wissenschaftlern,
+      die nur in Matlab programmieren.
 - name: FORTRAN
   percentage: 70
-  desc: |
-    Although many software developers roll their eyes when you start talking about FORTRAN, climate models are still based on this old but very efficient language. And as such, I started very soon to develop numerical computational models in FORTRAN. During my master I worked with the <a href="https://mpimet.mpg.de/en/science/models/mpi-esm/">Max-Planck-Institutes Earth-System-Model (MPI-ESM)</a>, a parallelized coupled model of atmosphere, ocean and land surface. I worked with the parallelization of the MPI-ESM via OpenMP, and I developed my own statistical weather generator <a href="https://github.com/ARVE-Research/gwgen_f90">GWGEN</a>.
+  i18n: fortran
+  desc:
+    en: |
+      Although many software developers roll their eyes when you start talking
+      about FORTRAN, climate models are still based on this old but very
+      efficient language. And as such, I started very soon to develop numerical
+      computational models in FORTRAN. During my master I worked with the
+      [Max-Planck-Institutes Earth-System-Model (MPI-ESM)](https://mpimet.mpg.de/en/science/models/mpi-esm/),
+      a coupled model of atmosphere, ocean and land surface. I
+      worked with the parallelization of the MPI-ESM via OpenMP, and I developed
+      a statistical weather generator,
+      [GWGEN](https://github.com/ARVE-Research/gwgen_f90).
+    de: |
+      Obwohl viele Softwareentwickler mit den Augen rollen, wenn man über
+      FORTRAN spricht, basieren Klimamodelle immer noch auf dieser alten, aber
+      sehr effizienten Sprache. Und so begann ich sehr bald, numerische
+      Rechenmodelle in FORTRAN zu entwickeln. Während meines Masterstudiums
+      arbeitete ich mit dem
+      [Erdsystem-Modell Max-Planck-Instituts (MPI-ESM)](https://mpimet.mpg.de/en/science/models/mpi-esm/),
+      einem gekoppelten Modell von Atmosphäre, Ozean und Landoberfläche. Ich
+      arbeitete an der Parallelisierung des MPI-ESM über OpenMP und entwickelte
+      einen statistischen Wettergenerator,
+      [GWGEN](https://github.com/ARVE-Research/gwgen_f90).
 - name: Bash
   percentage: 90
-  desc: |
-    I am using the terminal more than any other software, and as such I am constantly using Bash. Not so much in scripts, but rather interactively from the command line. Nevertheless I am also sometimes computing from the command line using, for example, Climate Data Operators (CDOs) or NetCDF Operators (NCOs).
+  i18n: bash
+  desc:
+    en: |
+      I am using the terminal more than any other software, and as such I am
+      constantly using Bash. Not so much in scripts, but rather interactively
+      from the command line. Nevertheless I am also sometimes computing from
+      the command line using, for example, Climate Data Operators (CDOs) or
+      NetCDF Operators (NCOs).
+    de: |
+      Ich benutze das Terminal mehr als jede andere Software, und als solche
+      benutze ich ständig Bash. Nicht so sehr in Skripten, sondern eher
+      interaktiv in der Kommandozeile. Trotzdem rechne ich manchmal auch von
+      der Kommandozeile aus, zum Beispiel mit Climate Data Operators (CDOs)
+      oder NetCDF Operators (NCOs).
 - name: C/C++
   percentage: 30
-  desc: I can read and write C and C++ but so far there were not so many possible applications for me to use it since all the HPC applications that I worked with are written in FORTRAN. But I am keen to improve my skills with these languages in the near future.
+  i18n: c
+  desc:
+    en: |
+      I can read and write C and C++ but so far there were not so many
+      possible applications for me to use it since all the HPC applications
+      that I worked with are written in FORTRAN. But I am keen to improve my
+      skills with these languages in the future.
+    de: |
+      Ich kann C und C++ lesen und schreiben, aber bisher gab es nicht so viele
+      mögliche Anwendungen, da alle HPC-Anwendungen, mit denen ich gearbeitet habe
+      mit denen ich gearbeitet habe, in FORTRAN geschrieben sind. Aber ich bin
+      sehr daran interessiert, meine Fähigkeiten mit diesen Sprachen in
+      Zukunft zu verbessern.
 - name: Postgres
   percentage: 80
-  desc: |
-    In our pollen assemblage projects, namely the <a href="http://p3.snf.ch/project-169598" title="Holocene Climate Reconstruction for the Northern Hemisphere Extra-tropics">HORNET</a> and the <a href="https://EMPD2.github.io" title="Eurasian Modern Pollen Database">EMPD</a> projects, we are distributing the data as a relational postgres database. The EMPD-admin, the automated adminstration webapp for the EMPD, reads and writes to this postgres database and uses it as a test for new contributions whether the comply with the standards of the database.
+  i18n: postgres
+  desc:
+    en: |
+      In our pollen assemblage projects, namely the HORNET and the EMPD
+      projects, we are distributing the data as a relational postgres database.
 
-    Nowadays I am working working a lot with Django. Hence I frequently setup and use postgres databases, both from the python interface and from the SQL shell.
+      Nowadays I am working working a lot with Django. Hence I frequently setup
+      and use postgres databases, both from the python interface and from the
+      SQL shell.
+    de: |
+      In unseren Pollenassemblage-Projekten, nämlich den Projekten HORNET und EMPD
+      Projekte, verteilen wir die Daten in einer relationalen Postgres-Datenbank.
+
+      Heutzutage arbeite ich viel mit Django. Daher richte ich häufig
+      Postgres-Datenbanken ein und verwende sie, sowohl über die
+      Python-Schnittstelle als auch über die SQL-Shell.
 - name: Javascript
   percentage: 70
-  desc: |
-    I am not a frontend web developper by training, but I nevertheless used HTML and Javascript several times to share my work with colleagues. From within Django and to minor extends also from frontend frameworks like angular and VueJS.
+  i18n: javascript
+  desc:
+    en: |
+      I am not a frontend web developper by training, but I nevertheless used
+      HTML and Javascript several times to share my work with colleagues. From
+      within Django and to minor extends also from frontend frameworks like
+      angular and VueJS.
 
-    In the past, I started with static web interfaces, such as the EMPD-viewer, hosted at <a href="https://EMPD2.github.io">EMPD2.github.io</a>.
+      In the past, I started with static web interfaces, such as the
+      EMPD-viewer, hosted at [EMPD2.github.io](https://EMPD2.github.io).
+    de: |
+      Ich bin kein ausgebildeter Frontend-Webentwickler, aber ich habe trotzdem
+      HTML und Javascript mehrmals verwendet, um meine Arbeit mit Kollegen zu teilen. Von
+      innerhalb von Django und in geringem Umfang auch von Frontend-Frameworks wie
+      angular und VueJS.
+
+      In der Vergangenheit habe ich mit statischen Weboberflächen begonnen, wie z.B. dem
+      EMPD-Viewer, gehostet auf [EMPD2.github.io](https://EMPD2.github.io).
 - name: Kubernetes
   percentage: 80
-  desc: |
-    I developed a workflow to securely deploy multiple web applications at our new RedHat OpenShift Container Platform, from static websites to <a href="javascript:switch2desc('Java')">Java</a> and <a href="javascript:switch2desc('Python')">Python (Django)</a> applications.
+  i18n: kubernetes
+  desc:
+    en: |
+      I developed a workflow to securely deploy multiple web applications at
+      our new RedHat OpenShift Container Platform. From static websites to
+      [Java](javascript:switch2desc('Java')) and
+      [Python (Django)](javascript:switch2desc('Python')) applications.
 
-    The workflow is based upon helm charts and cookiecutter templates for docker repositories. This framework allows the maximum of flexibility and still abstracts all the complex configuration options for Kubernetes to the templates.
+      The workflow is based upon helm charts and cookiecutter templates for
+      docker repositories. This framework allows the maximum of flexibility and
+      still abstracts all the complex configuration options for Kubernetes to
+      the templates.
 
-    The software templates are published open-source at <a href="https://codebase.helmholtz.cloud/hcdc/software-templates">the Helmholtz Codebase</a>, as well as the <a href="https://codebase.helmholtz.cloud/hcdc/kubernetes/charts">the Helm Charts</a>.
+      The software templates are published open-source at
+      [the Helmholtz Codebase](https://codebase.helmholtz.cloud/hcdc/software-templates),
+      as well as the [the Helm Charts](https://codebase.helmholtz.cloud/hcdc/kubernetes/charts).
+    de: |
+      Ich habe einen Workflow entwickelt, um mehrere Webanwendungen sicher auf
+      unserer neuen RedHat OpenShift Container Platform zu deployen.
+      Von statischen Websites bis hin zu [Java](javascript:switch2desc('Java')) und
+      [Python (Django)](javascript:switch2desc('Python')) Anwendungen.
+
+      Der Arbeitsablauf basiert auf Helm-Charts und Cookiecutter-Vorlagen für
+      Docker-Repositories. Dieses Framework erlaubt ein Maximum an Flexibilität und
+      abstrahiert dennoch alle komplexen Konfigurationsoptionen für Kubernetes zu
+      die Vorlagen.
+
+      Die Software-Templates sind Open-Source veröffentlicht unter
+      [die Helmholtz Codebase](https://codebase.helmholtz.cloud/hcdc/software-templates),
+      sowie die [the Helm Charts](https://codebase.helmholtz.cloud/hcdc/kubernetes/charts).
 - name: Java
+  i18n: java
   percentage: 0
-  desc: |
-    Although several applications that I have to maintain are based on Java, I would not describe myself as being a Java developer. I am much more into <a href="javascript:switch2desc('Python')">Python</a>.
+  desc:
+    en: |
+      Although several applications that I have to maintain are based on Java,
+      I would not describe myself as being a Java developer. I am much more
+      into [Python](javascript:switch2desc('Python')).
+    de: |
+      Obwohl mehrere Anwendungen, die ich zu warten habe, auf Java basieren,
+      würde ich mich nicht als Java-Entwickler bezeichnen. Ich bin viel mehr
+      mit [Python](javascript:switch2desc('Python')) unterwegs.
