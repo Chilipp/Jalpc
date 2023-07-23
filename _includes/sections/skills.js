@@ -141,7 +141,9 @@ function numProjects(skill) {
         {% endfor %}
 
     }
-    return "Explicitly used in " + N + " project" + (N == 1 ? "" : "s") + ".";
+    return `
+    Explicitly used in ${N} project${(N == 1 ? "" : "s")}. Click to see more.
+    `;
 }
 
 
