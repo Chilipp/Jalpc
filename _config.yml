@@ -95,6 +95,20 @@ donation: off  # type 'on'/'off' to choice display donation button at post page 
 index_carousel: on  # index page carousel switch
 blog_carousel: off  # blog page carousel switch
 
+exclude:
+  - build/
+  - LICENSE
+  - JALPC_LICENSE
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - readme_files/
+  - README.md
+  - robots.txt
+  - node_modules/
+  - Gemfile
+  - Gemfile.lock
+
 # scss
 sass:
   style: compressed
