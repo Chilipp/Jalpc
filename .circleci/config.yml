@@ -34,8 +34,8 @@ build_jekyll: &build_jekyll
       cd ~/repo
 
       # Update baseurl in config
-      URL=https://${CIRCLE_BUILD_NUM}-267395254-gh.circle-artifacts.com
-      echo "baseurl: /0/preview" >> _config.yml
+      URL=https://output.circle-artifacts.com
+      echo "baseurl: /output/job/${CIRCLE_WORKFLOW_JOB_ID}/artifacts/${CIRCLE_NODE_INDEX}/preview" >> _config.yml
       echo "url: $URL" >> _config.yml
 
       # Build site to download template
