@@ -11,7 +11,7 @@
     en: |
       Most of the tools I develop are available as open source packages on
       [Github](https://github.com/Chilipp?tab=repositories) and the
-      [Helmholtz GitLab](https://codebase.helmholtz.cloud/philipp.sommer). As
+      [Helmholtz GitLab](https://codebase.helmholtz.cloud/Chilipp). As
       such, my workflow is based on multiple services freely available for
       open source projects. These services allow me to automatically test,
       monitor, document, distribute and deploy my packages. The services I use
@@ -28,7 +28,7 @@
     de: |
       Die meisten meiner Tools sind als Open Source Pakete auf
       [Github](https://github.com/Chilipp?tab=repositories) und dem
-      [Helmholtz GitLab](https://codebase.helmholtz.cloud/philipp.sommer)
+      [Helmholtz GitLab](https://codebase.helmholtz.cloud/Chilipp)
       verfügbar. Als solche basiert mein Workflow auf mehreren Services, die
       für Open Source-Projekte frei nutzbar sind. Diese Dienste ermöglichen es mir,
       meine Pakete automatisch zu testen, zu überwachen, zu dokumentieren und
@@ -53,13 +53,13 @@
       collaborative working environment. The source code of all the software
       packages I develop is hosted on
       [Github](https://github.com/Chilipp?tab=repositories) and the
-      [Helmholtz GitLab](https://codebase.helmholtz.cloud/philipp.sommer), either
+      [Helmholtz GitLab](https://codebase.helmholtz.cloud/Chilipp), either
       as public or private projects.
     de: |
       Ich benutze die Versionskontrolle, um eine transparente und kollaborative
       Arbeitsumgebung zu ermöglichen. Der Quellcode aller Softwarepakete, die
       ich entwickle, wird auf [Github](https://github.com/Chilipp?tab=repositories)
-      und dem [Helmholtz GitLab](https://codebase.helmholtz.cloud/philipp.sommer)
+      und dem [Helmholtz GitLab](https://codebase.helmholtz.cloud/Chilipp)
       gehostet, entweder als öffentliche oder private Projekte.
 
 - name: Teaching
