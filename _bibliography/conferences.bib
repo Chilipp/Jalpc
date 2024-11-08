@@ -195,4 +195,55 @@ In this presentation, I will show the main functionalities of psyplot, with a sp
   pdf_file  = {https://github.com/Chilipp/psyplot-DACH2022-presentation},
 }
 
+@InProceedings{Sommer2024,
+  author    = {Sommer, Philipp S. and Heß, Robin and Saß, Björn L. and Schäfer, Angela},
+  booktitle = {9th Data Science Symposium, Bremen, Germany},
+  title     = {Implementing an Analysis Framework in the Marine Data Portal of the German Marine Research Alliance (DAM)},
+  year      = {2024},
+  publisher = {Zenodo},
+  abstract  = {The continuous growth of Earth System data, coupled with its inherent heterogeneity and the challenges associated with distributed data centers, necessitates a robust framework for efficient and secure data analysis. This abstract outlines the plans to implement an analysis framework within the marine data portal of the German Marine Research Alliance (Deutsche Allianz Meeresforschung, DAM) at https://marine-data.de. The proposed framework is based on the Data Analytics Software Framework (DASF), chosen for its decentralized, secure, and publisher-subscriber-based (pub-sub-based) architecture, which enables the execution of data analysis backends anywhere without exposing sensitive IT systems to the internet.
+
+The challenges of analyzing Earth System data on the web are multifaceted. Data heterogeneity arises from the diverse sources, formats, and structures of earth system data, making seamless integration and analysis a complex task. The sheer volume of data compounds the challenge, demanding scalable solutions to handle vast amounts of information efficiently. Additionally, the computational power required for meaningful analysis is often expensive and can become a bottleneck in traditional data processing pipelines. Moreover, the distributed nature of data across multiple centers poses logistical challenges in terms of accessibility, security, and coordination.
+
+To address these challenges, the integration of DASF into the marine data portal presents a comprehensive solution. DASF offers a secure and decentralized pub-sub-based remote procedure call framework, providing a flexible environment for executing data analysis backends. One of the key advantages of DASF is its ability to allow these backends to run anywhere without the need to expose sensitive IT systems to the internet, addressing the security concerns associated with data analysis.
+
+The decentralized nature of DASF also mitigates data heterogeneity challenges by offering a unified platform for data integration and analysis. With DASF, disparate data sources can seamlessly communicate, facilitating interoperability and enabling comprehensive analysis across diverse datasets. The pub-sub mechanism ensures efficient communication between components, streamlining the flow of data through the analysis pipeline.
+
+Security is a critical aspect of implementing a robust data analysis framework. DASF addresses this concern by incorporating an OAuth-based authentication mechanism at the message broker level. This ensures that only authorized users can access and interact with the data analysis functionalities. Additionally, the integration with the Helmholtz AAI empowers the sharing of analysis routines with users from other research centers or the general public.
+
+The cost-effectiveness of DASF further enhances its appeal, as it optimizes the utilization of computational resources. By enabling the deployment of analysis components on diverse hardware environments, organizations can leverage existing infrastructure without significant additional investments.
+
+In conclusion, the integration of DASF into the DAM portal marks a significant step toward overcoming the challenges inherent in analyzing Earth System data on the web. By addressing data heterogeneity, accommodating vast datasets, and providing a secure and decentralized architecture, DASF emerges as a key enabler for efficient and scalable data analysis. The adoption of DASF in the marine data portal promises to enhance the accessibility, security, and cost-effectiveness of data analytics, and finally facilitates open science in the research field Earth and Environment.},
+  copyright = {Creative Commons Attribution 4.0 International},
+  doi       = {10.5281/ZENODO.10929757},
+  journal   = {deRSE24 - Conference for Research Software Engineering in Germany (deRSE24), Würzburg, Germany},
+  pdf_file  = {https://zenodo.org/records/10929757/files/dam-dasf-pr%C3%A4sentation-data-science-symposium-2024.pdf?download=1},
+}
+
+@InProceedings{Sommer2024a,
+  author    = {Sommer, Philipp S. and Saß, Björn L. and Benninghoff, Markus},
+  booktitle = {deRSE24 - Conference for Research Software Engineering in Germany (deRSE24), Würzburg, Germany},
+  title     = {Enhancing Research Software Sustainability through Modular Open-Source Software Templates},
+  year      = {2024},
+  publisher = {Zenodo},
+  abstract  = {Research software development is crucial for scientific advancements, yet the sustainability and maintainability of such software pose significant challenges. In this tutorial, we present a comprehensive demonstration on leveraging software templates to establish best-practice implementations for research software, aiming to enhance its longevity and usability.
+
+Our approach is grounded in the utilization of Cookiecutter, augmented with a fork-based modular Git strategy, and rigorously unit-tested methodologies. By harnessing the power of Cookiecutter, we streamline the creation process of research software, providing a standardized and efficient foundation. The fork-based modular Git approach enables flexibility in managing variations, facilitating collaborative development while maintaining version control and traceability.
+
+Central to our methodology is the incorporation of unit testing, ensuring code integrity and reliability of the templates. Moreover, we employ Cruft, a tool tailored to combat the proliferation of boilerplate code, often referred to as the "boilerplate-monster." By systematically managing and removing redundant code, Cruft significantly enhances the maintainability and comprehensibility of research software. This proactive approach mitigates the accumulation of technical debt and facilitates long-term maintenance.
+
+The open-source templates are available at https://codebase.helmholtz.cloud/hcdc/software-templates/. In the first 30 minutes of the tutorial, participants will gain insights into the structured organization of these software templates, enabling them to understand the framework's architecture and application to their own software products. The subsequent 30 minutes will be dedicated to a hands-on tutorial, allowing participants to engage directly with the templates, guiding them through the process of implementing and customizing them for their specific research software projects.
+
+Maintaining research software presents distinct challenges compared to traditional software development. The diverse skill sets of researchers, time constraints, lack of standardized practices, and evolving requirements contribute to the complexity. Consequently, software often becomes obsolete, challenging to maintain, and prone to errors.
+
+Through our tutorial, we address these challenges by advocating for the adoption of software templates. These templates encapsulate best practices, enforce coding standards, and promote consistent structures, significantly reducing the cognitive load on developers. By providing a well-defined starting point, researchers can focus more on advancing their scientific endeavors rather than grappling with software complexities.
+
+Furthermore, the utilization of software templates fosters collaboration and knowledge sharing within research communities. It encourages the reuse of proven solutions, accelerates the onboarding process for new contributors, and facilitates better documentation practices. Ultimately, this approach leads to a more sustainable ecosystem for research software, fostering its evolution and ensuring its relevance over time.
+
+In summary, our tutorial offers a practical and comprehensive guide to creating and utilizing software templates for research software development. By harnessing Cookiecutter with Git-based modularity, unit testing, and the power of Cruft, we aim to empower researchers in building robust, maintainable, and sustainable software, thereby advancing scientific progress in an efficient and impactful manner.},
+  copyright = {Creative Commons Attribution 4.0 International},
+  doi       = {10.5281/ZENODO.11320120},
+  language  = {en},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
