@@ -4,7 +4,7 @@
 
 - name: HORNET
   i18n: hornet
-  url: http://p3.snf.ch/project-169598
+  url: https://p3.snf.ch/project-169598
   img: /static/assets/img/landing/hornet.svg
   img_title: Android L Animals Insects by icons8
   desc:
