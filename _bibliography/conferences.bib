@@ -246,4 +246,25 @@ In summary, our tutorial offers a practical and comprehensive guide to creating 
   language  = {en},
 }
 
+@InProceedings{Sommer2026,
+  author    = {Sommer, Philipp S.},
+  title     = {Managing an RSE Ecosystem via Continuously Deploying Templates},
+  month     = mar,
+  year      = 2026,
+  publisher = {Zenodo},
+  version   = {v1.0.0},
+  doi       = {10.5281/zenodo.18854139},
+  url       = {https://doi.org/10.5281/zenodo.18854139},
+  pdf_file  = {https://zenodo.org/records/18854139/files/main.pdf?download=1},
+  abstract  = {In modern research software engineering (RSE), maintaining consistency, quality, and sustainability across a growing number of software projects poses significant challenges. This work presents a novel approach to managing an RSE ecosystem by leveraging continuously deployed and open-source software templates as the foundation for all projects. These templates encapsulate state-of-the-art software engineering practices, including modular architecture, automated testing, formatting and linting, and documentation standards.
+
+Projects are instantiated from these templates using Cruft, an open-source tool that enables non-destructive template updates. Cruft preserves project-specific customizations while allowing seamless integration of upstream improvements. This ensures that all derived projects remain aligned with evolving best practices without requiring manual intervention or risking regressions.
+
+To automate the propagation of template changes, we integrate GitLab CI/CD with a registry of template-derived projects. Parent-child pipeline relationships are established, enabling a centralized update mechanism: when a template is modified, downstream projects are automatically triggered to incorporate and validate the changes. This approach not only reduces technical debt but also enforces consistency and compliance across the ecosystem.
+
+Beyond template management, the same pipeline infrastructure is extended to handle continuous deployment of downstream dependencies, particularly in web applications. When a core library or shared component is updated, dependent applications are rebuilt and redeployed automatically, ensuring rapid delivery of improvements and security patches.
+
+This ecosystem-wide automation fosters a sustainable development environment where reproducibility, maintainability, and scalability are first-class citizens. By combining Cruft’s template tracking with GitLab’s CI/CD orchestration, we demonstrate a robust and extensible framework for managing complex RSE ecosystems with minimal manual overhead.}
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
