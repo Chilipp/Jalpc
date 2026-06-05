@@ -267,4 +267,23 @@ Beyond template management, the same pipeline infrastructure is extended to hand
 This ecosystem-wide automation fosters a sustainable development environment where reproducibility, maintainability, and scalability are first-class citizens. By combining Cruft’s template tracking with GitLab’s CI/CD orchestration, we demonstrate a robust and extensible framework for managing complex RSE ecosystems with minimal manual overhead.}
 }
 
+@InProceedings{Sommer2026a,
+  author    = {Sommer, Philipp S. and Ali, Naseem and Geyer, Beate and Harsh, Grover and Schulz-Stellenfleth, Johannes},
+  booktitle = {Helmholtz AI Conference 2026: AI for Science (HAICON26) , Munich, Germany},
+  title     = {Integrating an LLM Chatbot into an Existing Web Frontend via DASF and MCP},
+  year      = {2026},
+  month     = jun,
+  publisher = {Zenodo},
+  abstract  = {Large-language-model (LLM) chat interfaces are ubiquitous but often live beside domain applications rather than within them. We present a chatbot embedded into an existing web framework by combining the Data Analytics Software Framework (DASF)—a secure, message‑broker–based RPC system—with the Model Context Protocol (MCP) for lightweight tool exposure.
+
+DASF exposes Python classes and functions as remotely callable procedures without opening internet‑facing ports, enabling the chatbot backend to run near high‑value infrastructure (e.g., HPC), minimizing data movement and aligning with institutional security policies. Building on DASF’s generated Python client stubs, we add an MCP server that orchestrates requests and is used by an OpenAI‑compatible API (the Blablador service at Forschungszentrum Jülich) for conversational processing. On the frontend, we reuse generic, composable components from prior work (doi:10.5194/egusphere-egu25-3120) and exploit DASF’s asynchronous execution to stream results into the interface.
+
+Unlike detached chat UIs, our approach embeds conversations within operational frontend so responses appear as domain‑native views — maps, plots, tables, dashboards — rather than plain text only. The chatbot acts as a copilot: it triggers analyses, parameterizes workflows, and visualizes outcomes in context while keeping compute close to data. This tight coupling yields a secure, scalable, and maintainable architecture that augments user workflows, lowers the barrier to advanced analytics, and improves accessibility without re‑platforming or duplicating interfaces.
+
+In effect, conversation becomes an interaction modality for the host application. The system orchestrates computations near HPC resources without inbound ports and returns model outputs rendered natively by the application. Thanks to DASF’s generic design, the framework generalizes across scientific knowledge‑transfer scenarios and stakeholder engagements with minimal need for supplemental web development.},
+  doi       = {10.5281/zenodo.20516581},
+  pdf_file  = {https://zenodo.org/records/20516581/files/dasf-mcp-poster-haicon26.pdf?download=1},
+  url       = {https://doi.org/10.5281/zenodo.20516581},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
