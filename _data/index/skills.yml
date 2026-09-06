@@ -62,6 +62,37 @@
       und dem [Helmholtz GitLab](https://codebase.helmholtz.cloud/Chilipp)
       gehostet, entweder als öffentliche oder private Projekte.
 
+- name: Agentic AI
+  percentage: 80
+  i18n: agentic-ai
+  desc:
+    en: |
+      My work on agentic AI focuses on enabling agentic digital twins that go 
+      beyond conversational interfaces by securely integrating scientific 
+      methods, distributed infrastructures, and trusted data sources. I 
+      work on an open-source framework based on the Data Analytics 
+      Software Framework (DASF), which allows existing Python workflows, models, 
+      and services to be exposed as reusable, remotely callable components. The 
+      framework supports interoperable, secure orchestration across 
+      high-performance computing systems, institutional infrastructures, and 
+      domain-specific services while respecting security policies. Through 
+      standardized deployments and reusable architectures, it accelerates the 
+      development of scalable agentic systems.
+    de: |
+      Meine Arbeit im Bereich der agentenbasierten KI konzentriert sich darauf, 
+      agentenbasierte digitale Zwillinge zu ermöglichen, die über 
+      dialogorientierte Schnittstellen hinausgehen, indem wissenschaftliche
+      Methoden, verteilte Infrastrukturen und vertrauenswürdige Datenquellen 
+      sicher integriert werden. Ich arbeite an einem Open-Source-Framework auf 
+      Basis des Data Analytics Software Framework (DASF), das es ermöglicht, 
+      bestehende Python-Workflows, Modelle und Dienste als wiederverwendbare, 
+      aus der Ferne aufrufbare Komponenten bereitzustellen. Das Framework 
+      unterstützt eine interoperable, sichere Orchestrierung über
+      Hochleistungsrechnersysteme, institutionelle Infrastrukturen und
+      domänenspezifische Dienste hinweg unter Einhaltung von Sicherheitsrichtlinien. Durch
+      standardisierte Bereitstellungen und wiederverwendbare Architekturen beschleunigt es die
+      Entwicklung skalierbarer agentischer Systeme.
+
 - name: Teaching
   percentage: 50
   i18n: teaching
