@@ -175,26 +175,22 @@
       Heutzutage arbeite ich viel mit Django. Daher richte ich häufig
       Postgres-Datenbanken ein und verwende sie, sowohl über die
       Python-Schnittstelle als auch über die SQL-Shell.
-- name: Javascript
-  percentage: 70
+- name: HTML/Javascript
+  percentage: 80
   i18n: javascript
   desc:
     en: |
-      I am not a frontend web developper by training, but I nevertheless used
-      HTML and Javascript several times to share my work with colleagues. From
-      within Django and to minor extends also from frontend frameworks like
-      angular and VueJS.
-
-      In the past, I started with static web interfaces, such as the
-      EMPD-viewer, hosted at [EMPD2.github.io](https://EMPD2.github.io).
+      A central part of my work nowadays is the development of user interfaces
+      for website. My focus is on building reuseable frontend components in 
+      various frameworks, namely ReactJS, VueJS, and Djangos builtin template
+      system. My experience here ranges from building reuseable library components
+      to building entire website frameworks including a CMS.
     de: |
-      Ich bin kein ausgebildeter Frontend-Webentwickler, aber ich habe trotzdem
-      HTML und Javascript mehrmals verwendet, um meine Arbeit mit Kollegen zu teilen. Von
-      innerhalb von Django und in geringem Umfang auch von Frontend-Frameworks wie
-      angular und VueJS.
-
-      In der Vergangenheit habe ich mit statischen Weboberflächen begonnen, wie z.B. dem
-      EMPD-Viewer, gehostet auf [EMPD2.github.io](https://EMPD2.github.io).
+      Ein zentraler Bestandteil meiner Arbeit ist derzeit die Entwicklung von Benutzeroberflächen
+      für Websites. Mein Schwerpunkt liegt auf der Erstellung wiederverwendbarer Frontend-Komponenten in
+      verschiedenen Frameworks, insbesondere ReactJS, VueJS und dem integrierten Template-System
+      von Django. Meine Erfahrung reicht dabei von der Erstellung wiederverwendbarer Components
+      bis hin zur Entwicklung kompletter Website-Frameworks einschließlich eines CMS.
 - name: Kubernetes
   percentage: 80
   i18n: kubernetes
@@ -227,15 +223,3 @@
       Die Software-Templates sind Open-Source veröffentlicht unter
       [die Helmholtz Codebase](https://codebase.helmholtz.cloud/hcdc/software-templates),
       sowie die [the Helm Charts](https://codebase.helmholtz.cloud/hcdc/kubernetes/charts).
-- name: Java
-  i18n: java
-  percentage: 0
-  desc:
-    en: |
-      Although several applications that I have to maintain are based on Java,
-      I would not describe myself as being a Java developer. I am much more
-      into [Python](javascript:switch2desc('Python')).
-    de: |
-      Obwohl mehrere Anwendungen, die ich zu warten habe, auf Java basieren,
-      würde ich mich nicht als Java-Entwickler bezeichnen. Ich bin viel mehr
-      mit [Python](javascript:switch2desc('Python')) unterwegs.
