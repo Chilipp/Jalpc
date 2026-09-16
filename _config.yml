@@ -27,16 +27,9 @@ author:  # change following line to your infomation.
   cv:   # An online CV can be printed as PDF, leave blank if you don't have now
   address_link: https://www.hereon.de/institutes/coastal_systems_analysis_modeling/regional_land_atmosphere_modeling/team/121461/index.php.de
   address: |
-    Helmholtz Zentrum Hereon<br><br>
+    Postfach 20 13<br><br>
 
-    Institut für Küstensysteme - Analyse und Modellierung<br>
-    Helmholtz Coastal Data Center<br>
-    Position(s): Data Scientist<br><br>
-
-    Helmholtz-Zentrum hereon GmbH<br>
-    Max-Planck-Straße 1<br>
-    DE - 21502 Geesthacht<br>
-    Phone: +49 (0) 4152 87-2126<br>
+    DE - 21498 Geesthacht<br>
   # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
   skill_icon1:
     - name: fa-github
